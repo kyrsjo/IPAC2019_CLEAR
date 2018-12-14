@@ -1,0 +1,148 @@
+\documentclass[a4paper,
+               %boxit,        % check whether paper is inside correct margins
+               %titlepage,    % separate title page
+               %refpage       % separate references
+               %biblatex,     % biblatex is used
+               keeplastbox,   % flushend option: not to un-indent last line in References
+               %nospread,     % flushend option: do not fill with whitespace to balance columns
+               %hyphens,      % allow \url to hyphenate at "-" (hyphens)
+               %xetex,        % use XeLaTeX to process the file
+               %luatex,       % use LuaLaTeX to process the file
+               ]{jacow}
+%
+% ONLY FOR \footnote in table/tabular
+%
+\usepackage{pdfpages,multirow,ragged2e} %
+%
+% CHANGE SEQUENCE OF GRAPHICS EXTENSION TO BE EMBEDDED
+% ----------------------------------------------------
+% test for XeTeX where the sequence is by default eps-> pdf, jpg, png, pdf, ...
+%    and the JACoW template provides JACpic2v3.eps and JACpic2v3.jpg which
+%    might generates errors, therefore PNG and JPG first
+%
+\makeatletter%
+\ifboolexpr{bool{xetex}}{\renewcommand{\Gin@extensions}{
+    .pdf,%
+    .png,.jpg,.bmp,.pict,.tif,.psd,.mac,.sga,.tga,.gif,%
+    .eps,.ps,%
+  }}{
+}
+\makeatother
+
+% CHECK FOR XeTeX/LuaTeX BEFORE DEFINING AN INPUT ENCODING
+% --------------------------------------------------------
+%   utf8  is default for XeTeX/LuaTeX
+%   utf8  in LaTeX only realises a small portion of codes
+%
+\ifboolexpr{bool{xetex} or bool{luatex}} % test for XeTeX/LuaTeX
+ {}                                      % input encoding is utf8 by default
+ {\usepackage[utf8]{inputenc}}           % switch to utf8
+
+\usepackage[USenglish]{babel}
+
+
+%
+% if BibLaTeX is used
+%
+\ifboolexpr{bool{jacowbiblatex}}%
+ {%
+  \addbibresource{jacow-test.bib}
+  \addbibresource{biblatex-examples.bib}
+ }{}
+\listfiles
+
+%%
+%%   Lengths for the spaces in the title
+%%   \setlength\titleblockstartskip{..}  %before title, default 3pt
+%%   \setlength\titleblockmiddleskip{..} %between title + author, default 1em
+%%   \setlength\titleblockendskip{..}    %afterauthor, default 1em
+
+\usepackage{todonotes}
+\usepackage{caption, subcaption}
+\usepackage{tikz}
+\input{fig/map/BEAMLINE_TIKZMACROS.tex}
+
+% SEE ALSO: https://hackmd.web.cern.ch/MXDrpL8NSjKBrgtns_t7Ig#
+
+\begin{document}
+
+\title{Status of the CLEAR electron beam user facility at CERN}
+
+\author{K. N. Sjobak\thanks{k.n.sjobak@fys.uio.no}\textsuperscript{1}, E. Adli, C. A. Lindstrom, University of Oslo, Oslo, Norway\\
+  M. Bergamaschi, S. Burger, R. Corsini, A. Curcio, S. Curt, S. Doebert, W. Farabolini, D. Gamba,\\
+  L. Garolfi, A. Gilardi, I. Gorgisyan, E. Granados, H. Guerin, R. Kieffer, M. Krupa, T. Lefevre,\\
+  S. Mazzoni, G. McMonagle, J. Nadenau, H. Panuganti, S. Pitman, V. Rude, A. Schlogelhofer,\\
+  P. K. Skowronski, M. Wendt, A. Zemanek, CERN, Geneva, Switzerland \\
+  A. Lyapin, UCL, London, United Kingdom \\
+  \textsuperscript{1}also at CERN, Geneva, Switzerland}
+
+\maketitle
+
+%
+\begin{abstract}
+  The CERN Linear Electron Accelerator for Research (CLEAR) is now in its second year of operation, providing a testbed for new accelerator technologies and a versatile radiation source.
+  Hosting a varied experimental program, this beamline provides a flexible test facility for users both internal and external to CERN, as well as being an excellent training ground for young accelerator physicists.
+  The energy can be varied between 60 and 220 MeV, bunch length between 1 and 3 ps, bunch charge in the range 1 to 200 pC, and number of bunches in the range 1 to 200, at a repetition rate of 0.8 to 10 Hz.
+  X-band test capabilities have been added to the facility during this run, further enriching the range of accelerator R\&D studies performed at CLEAR.
+  The status of the facility with an overview of the recent experimental results will be presented.
+\end{abstract}
+
+\section{Introduction}
+\todo[inline]{
+%\textbf{(Kyrre, Veronica, Riccardo)}\\
+ * Describe what CLEAR is and brief history\\
+ * Reference earlier CLEAR machine papers\\
+ * Overview picture of the beam line
+}
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}[h]{\textwidth}
+        \centering
+        \input{fig/map/CALIFES.tex}
+        \caption{CALIFES injector}
+    \end{subfigure}
+    \begin{subfigure}[h]{\textwidth}
+        \centering
+        \input{fig/map/EXPERIMENTAL1.tex}
+        \caption{Experimental beamline}
+    \end{subfigure}
+    \caption{Overview of the beamline elements at CLEAR}
+\end{figure*}
+
+\section{Operation and Performance}
+\todo[inline]{
+%\textbf{(Veronica, Kyrre)} \\
+ * Improvements and changes since last year\\
+ * Inductive BPM consolidation\\
+ * Camera system\\
+ * Laser system\\
+ * New parameter space within reach?
+}
+
+\section{Connection of Xbox-1 to Xband structure}
+\todo[inline]{
+\textbf{(Veronica, Helmut)}\\
+ * Picture, impact on operation\\
+ * Reference Sam's paper for details
+}
+
+\section{Overview of experimental program}
+
+\subsection{Medical irradiation tests}
+
+\subsection{Terrahertz}
+
+\subsection{CLIC module tests}
+\todo[inline]{Kicks, WFMs, BPMs, tests with power, \ldots}
+\subsection{Plasma lens}
+
+\section{Future plans}
+\todo[inline]{
+%\textbf{(Veronica)}\\
+ * Possibility of new beamline
+}
+
+\section{Conclusion}
+
+\end{document}

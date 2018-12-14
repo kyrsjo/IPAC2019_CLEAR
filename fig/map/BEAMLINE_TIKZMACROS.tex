@@ -1,0 +1,57 @@
+\usepackage{calc}
+
+\newcommand{\correctorMagnet}[2]{
+    \filldraw[blue!80] (#1,0) -- (#1-0.15, 0.7) -- (#1+0.15, 0.7);
+    \filldraw[blue!80] (#1,0) -- (#1-0.15,-0.7) -- (#1+0.15,-0.7);
+    
+    \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
+
+\newcommand{\BTV}[2]{
+    \draw[ultra thick, purple] (#1,0) circle (0.4);
+    \draw[ultra thick, purple] (#1,-0.3) -- (#1,0.3);
+    
+    \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
+
+\newcommand{\cBPM}[2]{
+    \draw[ultra thick, purple] (#1,0) circle (0.15);
+    
+    \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
+\newcommand{\iBPM}[2]{
+    \draw[ultra thick, purple] ({#1-0.25},-0.25) rectangle ({#1+0.25},+0.25);
+    
+    \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
+
+\newcommand{\lensF}[2] {
+    \pgfmathsetmacro{\lensRadius}{2};
+    \pgfmathsetmacro{\lensHeight}{0.7};
+    \pgfmathsetmacro{\startAngle}{asin(\lensHeight/\lensRadius)};
+    
+    \draw [fill=blue!15]  (#1,\lensHeight)
+         arc[start angle=180-\startAngle,delta angle=2*\startAngle,radius=\lensRadius]
+         arc[start angle=-\startAngle,delta angle=2*\startAngle,radius=\lensRadius]
+         -- cycle; % to get a better line end
+
+   \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
+
+\newcommand{\lensD}[2] {
+    \pgfmathsetmacro{\lensRadius}{2};
+    \pgfmathsetmacro{\lensHeight}{0.7};
+    \pgfmathsetmacro{\startAngle}{asin(\lensHeight/\lensRadius)};
+    
+    \draw [fill=blue!15]  (#1,\lensHeight) --
+         (#1-0.2,\lensHeight)
+         arc[start angle= 180+\startAngle,
+             end angle  = 180-\startAngle,
+             radius     = -\lensRadius] --
+         (#1+0.2,-\lensHeight)
+         arc[start angle=\startAngle,
+             end angle=180-\startAngle,radius=\lensRadius]
+         %.-- cycle; % to get a better line end
+
+   \node[rotate=-90,anchor=west] at (#1,-0.7) {#2};
+}
