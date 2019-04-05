@@ -105,7 +105,9 @@
     \pgfmathsetmacro{\VesperTabX}{0.8};
     \pgfmathsetmacro{\VesperTabY}{(\VesperStart-\VesperTabX)*tan(\VesperAngle)};
     
-    \filldraw[green,rotate=\VesperAngle] (\VesperTabX-0.5, \VesperTabY-0.5) rectangle (\VesperTabX+0.5, \VesperTabY+0.5)
+    \filldraw[green,rotate around={\VesperAngle:(\VesperTabX,\VesperTabY}]
+    (\VesperTabX-0.5, \VesperTabY-0.5) rectangle
+    (\VesperTabX+0.5, \VesperTabY+0.5);
     
     \draw[->,ultra thick] (\VesperStart,0)--(-1,\VesperY);
     
