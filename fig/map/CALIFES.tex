@@ -3,24 +3,16 @@
 %% K. Sjobak, 2018
 
 \begin{tikzpicture}
-    \draw[<-,ultra thick] (0,0)--(15,0);
+    \draw[<-,ultra thick] (-1,0)--(15,0);
     
     %% GUN
     
     % Gun solenoids
-    \draw[orange] (15,0.5) rectangle (14,0.7);
-    \draw[orange] (15,0.5) -- (14,0.7);
-    \draw[orange] (15,0.7) -- (14,0.5);
-    \draw[orange] (15,-0.5) rectangle (14,-0.7);
-    \draw[orange] (15,-0.5) -- (14,-0.7);
-    \draw[orange] (15,-0.7) -- (14,-0.5);
+    \solRect{15}{0.5}{14}{0.7}
+    \solRect{15}{-0.5}{14}{-0.7}
     
-    \draw[orange] (15.5,0.5) rectangle (15,0.7);
-    \draw[orange] (15.5,0.5) -- (15,0.7);
-    \draw[orange] (15.5,0.7) -- (15,0.5);
-    \draw[orange] (15.5,-0.5) rectangle (15,-0.7);
-    \draw[orange] (15.5,-0.5) -- (15,-0.7);
-    \draw[orange] (15.5,-0.7) -- (15,-0.5);
+    \solRect{15.25}{0.5}{15}{0.7}
+    \solRect{15.25}{-0.5}{15}{-0.7}
     
     % Gun cavity
     \draw[orange, ultra thick] (15,0.0) to (15,0.4)
@@ -32,43 +24,100 @@
         arc(0:180:0.05) arc(0:-180:0.15)
         arc(0:180:0.05) arc(0:-180:0.15);
     
+    \node[rotate=-90,anchor=west,align=left] at (15+0.25/2, -0.7)
+        {\belemsiz SNH 110};
+    \node[rotate=-90,anchor=west,align=left] at (14.5, -0.7)
+        {\belemsiz GUN 115\\
+         \belemsiz SNI 120};
+    
     \correctorMagnet{13.7}{DG 130};
     
-    %Laser mirror    
+    %Laser mirror
     \draw[ultra thick]  ({(13.7-13)/2+13 + 0.1}, -0.1) --
                         ({(13.7-13)/2+13 - 0.1}, -0.3);
-%    \draw[thick,->,green] ({(13.7-13)/2+13-0.2},{-(15-((13.7-13)/2+13))}) --
-%                          ({(13.7-13)/2+13},-0.2) -- 
-%                          (15,0);
-    \draw[thick,->,green] ({(13.7-13)/2+13},-2) --
-                          ({(13.7-13)/2+13},-0.2) -- 
-                          (15,0);
+    %Laser
+    \draw[thick,-latex,green]
+        ({(13.7-13)/2+13},-2) --
+        ({(13.7-13)/2+13},-0.2) -- 
+        (15,0);
     
     
+    %ICT 210
     \filldraw[purple] (13.,-0.5) rectangle (12.75,0.5);
-    \node[rotate=-90,anchor=west] at (12.75+0.25/2,-0.7) {ICT 210};
+    \node[rotate=-90,anchor=west] at (12.75+0.25/2,-0.7) {\belemsiz ICT 210};
 
-    \BTV{12.25}{MTV 215}
+    \BTV{12.35}{MTV 215}
     
-    \cBPM{11.6}{BPM 220}
-    \correctorMagnet{11.35}{DG 225};
+    \cBPM{11.8}{BPM 220}
+    \correctorMagnet{11.5}{DG 225};
     
-    \draw[ultra thick, orange] (11.2,-0.4) rectangle (9.7,0.4);
-    \cBPM{9.5}{BPM 240}
-    \correctorMagnet{9.25}{DG 245};
+    \draw[ultra thick, orange] (11.3,-0.4) rectangle (10.2,0.4);
     
-    \draw[ultra thick, orange] (9.1,-0.4) rectangle (7.6,0.4);
-    \cBPM{7.4}{BPM 260}
-    \correctorMagnet{7.15}{DG 265};
+    \solRect{11.3}{0.6}{10.2}{0.7}
+    \solRect{11.3}{-0.6}{10.2}{-0.7}
     
-    \draw[ultra thick, orange] (7.0,-0.4) rectangle (5.5,0.4);
-    \cBPM{5.3}{BPM 310}
-    \correctorMagnet{5.05}{DG 320};
+    \filldraw[blue] (11.3, 0.45) rectangle (10.2,  0.55);
+    \filldraw[blue] (11.3,-0.45) rectangle (10.2, -0.55);
     
-    \draw[ultra thick, orange] (4.9,-0.4) rectangle (4.25,0.4);
+    \node[rotate=-90,anchor=west, align=left] at (10.2+1.1/2,-0.7)
+        {\belemsiz ACS 230\\
+         \belemsiz DB 230-S\\
+         \belemsiz SNG 230};
     
-    \draw[ultra thick, purple] (4.15,-0.15) rectangle (3.85,0.15);
+    \cBPM{9.9}{BPM 240}
+    \correctorMagnet{9.6}{DG 245};
     
-    \lensF{3.5}{QFD 350};
-    \lensD{3.0}{QDD 355};
+    \draw[ultra thick, orange] (9.3,-0.4) rectangle (8.2,0.4);
+    \node[rotate=-90,anchor=west, align=left] at (8.2+1.1/2,-0.7) {\belemsiz ACS 250\\
+     \belemsiz SNG 250};
+
+    \solRect{9.3}{0.5}{8.2}{0.7};
+    \solRect{9.3}{-0.5}{8.2}{-0.7};
+    
+    \cBPM{7.9}{BPM 260}
+    \correctorMagnet{7.6}{DG 265};
+    
+    \draw[ultra thick, orange] (7.3,-0.4) rectangle (6.2,0.4);
+    \node[rotate=-90,anchor=west] at (6.2+1.1/2,-0.7) {\belemsiz ACS 270};
+    
+    \cBPM{5.9}{BPM 310}
+    \correctorMagnet{5.6}{DG 320};
+    
+    \kickerHV[0]{5.125}{SDH 340}{-1}{orange};
+
+    %\draw[ultra thick, purple] (4.15,-0.15) rectangle (3.85,0.15);
+    
+    \lensF{4.5}{QFD 350};
+    \lensD{4.0}{QDD 355};
+    \lensF{3.5}{QFD 360};
+    
+    \cBPM{3.0}{BPM 380};
+    \correctorMagnet{2.7}{DG 385};
+    
+    \BTV{2.2}{MTV 390};
+    
+    %% VESPER
+    
+    \pgfmathsetmacro{\VesperStart}{1.625};
+    \pgfmathsetmacro{\VesperAngle}{-22.0};
+    \pgfmathsetmacro{\VesperY}{(\VesperStart+1)*tan(\VesperAngle)};
+    
+    \pgfmathsetmacro{\VesperTabX}{0.8};
+    \pgfmathsetmacro{\VesperTabY}{(\VesperStart-\VesperTabX)*tan(\VesperAngle)};
+    
+    \filldraw[green,rotate=\VesperAngle] (\VesperTabX-0.5, \VesperTabY-0.5) rectangle (\VesperTabX+0.5, \VesperTabY+0.5)
+    
+    \draw[->,ultra thick] (\VesperStart,0)--(-1,\VesperY);
+    
+    \kickerHV[0]{\VesperStart}{BHB 400}{1}{blue};
+    
+    \pgfmathsetmacro{\VesperBTVaX}{0.8};
+    \pgfmathsetmacro{\VesperBTVaY}{(\VesperStart-\VesperBTVaX)*tan(\VesperAngle)};
+    \BTV[\VesperBTVaY]{\VesperBTVaX}{BTV420}
+    
+    \pgfmathsetmacro{\VesperBTVbX}{-0.5};
+    \pgfmathsetmacro{\VesperBTVbY}{(\VesperStart-\VesperBTVbX)*tan(\VesperAngle)};
+    \BTV[\VesperBTVbY]{\VesperBTVbX}{BTV440}
+    
+    
 \end{tikzpicture}

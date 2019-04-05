@@ -57,12 +57,15 @@
 %%   \setlength\titleblockmiddleskip{..} %between title + author, default 1em
 %%   \setlength\titleblockendskip{..}    %afterauthor, default 1em
 
-\usepackage{todonotes}
+%BEAMLINE DRAWING
 \usepackage{caption, subcaption}
 \usepackage{tikz}
+\usepackage{etoolbox}
 \input{fig/map/BEAMLINE_TIKZMACROS.tex}
 
-% SEE ALSO: https://hackmd.web.cern.ch/MXDrpL8NSjKBrgtns_t7Ig#
+%TMP WHILE WRITING
+\usepackage{showframe}
+\usepackage{todonotes}
 
 \begin{document}
 
@@ -107,22 +110,26 @@
         \input{fig/map/EXPERIMENTAL1.tex}
         \caption{Experimental beamline}
     \end{subfigure}
+    \begin{subfigure}[h]{\textwidth}
+        \centering
+        \input{fig/map/LEGEND.tex}
+        \caption{Symbols}
+    \end{subfigure}
     \caption{Overview of the beamline elements at CLEAR}
 \end{figure*}
 
 \section{Operation and Performance}
 \todo[inline]{
-%\textbf{(Veronica, Kyrre)} \\
  * Improvements and changes since last year\\
  * Inductive BPM consolidation\\
  * Camera system\\
  * Laser system\\
- * New parameter space within reach?
+ * New parameter space within reach?\\
+ * Vacuum consolidation
 }
 
 \section{Connection of Xbox-1 to Xband structure}
 \todo[inline]{
-\textbf{(Veronica, Helmut)}\\
  * Picture, impact on operation\\
  * Reference Sam's paper for details
 }
@@ -130,6 +137,7 @@
 \section{Overview of experimental program}
 
 \subsection{Medical irradiation tests}
+Beamline unmounting...
 
 \subsection{Terrahertz}
 
@@ -139,7 +147,6 @@
 
 \section{Future plans}
 \todo[inline]{
-%\textbf{(Veronica)}\\
  * Possibility of new beamline
 }
 
