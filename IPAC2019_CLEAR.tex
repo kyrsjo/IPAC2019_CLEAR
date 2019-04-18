@@ -60,11 +60,11 @@
 %BEAMLINE DRAWING
 \usepackage{caption, subcaption}
 \usepackage{tikz}
-\usepackage{etoolbox}
+%\usepackage{etoolbox}
 \input{fig/map/BEAMLINE_TIKZMACROS.tex}
 
 %TMP WHILE WRITING
-\usepackage{showframe}
+%\usepackage{showframe}
 \usepackage{todonotes}
 
 \begin{document}
@@ -84,41 +84,80 @@
 %
 \begin{abstract}
   The CERN Linear Electron Accelerator for Research (CLEAR) is now in its second year of operation, providing a testbed for new accelerator technologies and a versatile radiation source.
-  Hosting a varied experimental program, this beamline provides a flexible test facility for users both internal and external to CERN, as well as being an excellent training ground for young accelerator physicists.
-  The energy can be varied between 60 and 220 MeV, bunch length between 1 and 3 ps, bunch charge in the range 1 to 200 pC, and number of bunches in the range 1 to 200, at a repetition rate of 0.8 to 10 Hz.
+  Hosting a varied experimental program, this beamline provides a flexible test facility for users both internal and external to CERN, as well as being an excellent accelerator physics training ground.
+  The energy can be varied between 60 and 220 MeV, bunch length between 1 and 3 ps, bunch charge in the range 10~pC to 2 nC, and number of bunches in the range 1 to 200, at a repetition rate of 0.8 to 10 Hz.
   X-band test capabilities have been added to the facility during this run, further enriching the range of accelerator R\&D studies performed at CLEAR.
   The status of the facility with an overview of the recent experimental results will be presented.
 \end{abstract}
 
 \section{Introduction}
 \todo[inline]{
-%\textbf{(Kyrre, Veronica, Riccardo)}\\
  * Describe what CLEAR is and brief history\\
  * Reference earlier CLEAR machine papers\\
  * Overview picture of the beam line
 }
+
+The CLEAR facility was built from the probe beam injector CALIFES at CTF3, reusing and upgrading the accelerator part and installing several new experiments~\cite{Gamba::CLEAR,Corsini:FirstCLEAR}.
+The current beamline layout is illustrated in Fig.~\ref{fig:layout}, and a Mad-X model is available~\cite{CLEAR-MADX}.
+
+The main purpose of CLEAR is to provide a test-bed for new accelerator technologies including beam instrumentation, focusing devices, X-band accelerating structures, and more.
+Also hosted is a varied program of irradiation with electron beams, including tests of FLASH therapy and simulation of the radiation environment around Jupiter for the JUICE mission.
+This is achieved by having a flexible, easily accessible and modifiable beam-line with a wide span of available parameters. 
+
+As seen from the layout, the CLEAR machine is well equipped with diagnostics for measuring the beam parameters such as charge, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
+This makes it easier to setup a wide variety of beams for the hosted experiments.
+
+Unlike the rest of the CERN accelerator complex, CLEAR will be kept running throughout Long Shutdown 2.
 
 \begin{figure*}
     \centering
     \begin{subfigure}[h]{\textwidth}
         \centering
         \input{fig/map/CALIFES.tex}
+        \vspace{-2em} % Eat the space taken by some empty nodes
         \caption{CALIFES injector}
     \end{subfigure}
     \begin{subfigure}[h]{\textwidth}
         \centering
+        \vspace{-1em}
         \input{fig/map/EXPERIMENTAL1.tex}
-        \caption{Experimental beamline}
+        \vspace{-0.5em}
+        \caption{Experimental beamline
+        (continues after CALIFES, shown above)}
     \end{subfigure}
     \begin{subfigure}[h]{\textwidth}
         \centering
         \input{fig/map/LEGEND.tex}
+        \vspace{-2em} % Eat the space taken by some empty nodes
         \caption{Symbols}
     \end{subfigure}
-    \caption{Overview of the beamline elements at CLEAR}
+    \caption{Overview of the elements directly interacting with the beam at CLEAR beamline, and the location of the experimental stations as of April 2019. Element positions indicate the middle of each element, rounded to the nearest cm.}
+    \label{fig:layout}
 \end{figure*}
 
 \section{Operation and Performance}
+
+\begin{table}[b]
+    \centering
+    \caption{Typical beam parameters at the exit of the CALIFES injector.}
+    \label{tab:beamparameters}
+    \begin{tabular}{c c}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Beam energy       &  60~MeV -- 220~MeV\\
+        Beam charge       &  10~pC  -- 1.5~nC \\
+        Bunch length      &   1~ps  -- 3~ps \\
+        Bunch frequency   &   1.5~GHz \\
+        Number of bunches &  1-200 \\
+        Beam repetition rate   & 1/(1.2~s) -- 10~Hz \\
+        RMS $\epsilon_N$ at QFD350 entrance & 1~$\mu$m--15~$\mu$m\\
+        Typ. $\beta$ at QFD350 entrance & 5 -- 15~m \\
+        Typ. $\alpha$ at QFD350 entrance & -1 to +1 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 \todo[inline]{
  * Improvements and changes since last year\\
  * Inductive BPM consolidation\\
@@ -128,28 +167,68 @@
  * Vacuum consolidation
 }
 
-\section{Connection of Xbox-1 to Xband structure}
-\todo[inline]{
- * Picture, impact on operation\\
- * Reference Sam's paper for details
-}
+The typical beam parameters currently provided are listed in Table~\ref{tab:beamparameters}.
+
+Most of the improvements since last IPAC~\cite{Corsini:FirstCLEAR} have been related to consolidation of the accelerator and 
+
+Consolidation of klystron hardware
+
+FESA upgrades
+
+On the beam-line, two quadrupoles QDD870 and QFD880 have been installed in order to provide a narrow beam-spot into the In-Air test area and to measure the beam emittance after the plasma lens using the quadrupole tuning method.
+Furthermore 
+
+One issue that was found and corrected during the shutdown 2018/2019 shut-down was the calibration of the integrating current monitors. These devices, which are torroid
+
+Charge measurement...
 
 \section{Overview of experimental program}
+
+There are a number of experimental stations along the beam line, as marked in green on Figure~\ref{fig:layout}.
+Some of these host permanently installed experiments like the CLIC test area and the Plasma Lens Experiment.
+Others are used for more temporary experiments, such as VESPER, which is used to host various irradiation tests; or the In-air test area which is used for tests of THz generation, as well as protoype advanced beam instrumentation for beam position and bunch length measurement.
+
+\subsection{VESPER electronic component irradiation}
 
 \subsection{Medical irradiation tests}
 Beamline unmounting...
 
-\subsection{Terrahertz}
-
 \subsection{CLIC module tests}
 \todo[inline]{Kicks, WFMs, BPMs, tests with power, \ldots}
+
 \subsection{Plasma lens}
+\begin{figure}
+    \includegraphics[width=\columnwidth]{fig/HeAr.png}
+    \caption{Discharges in the CLEAR plasma lens experiment.}
+\end{figure}
+
+The plasma lens experiment
+
+
+\subsection{Terrahertz}
+
 
 \section{Future plans}
 \todo[inline]{
  * Possibility of new beamline
 }
 
+\subsection{Connection of Xbox-1 to Xband structure}
+\todo[inline]{
+ * Picture, impact on operation\\
+ * Reference Sam's paper for details
+}
+
 \section{Conclusion}
+
+\begin{thebibliography}{9} % Use for 1-9 references
+    \bibitem{Gamba::CLEAR} D. Gamba et al., “The CLEAR user facility at CERN,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Dec. 2017.
+    
+    \bibitem{Corsini:FirstCLEAR} R. Corsini et al., “First Experiments at the CLEAR user facility,” in Procedings of IPAC2018, Vancouver, BC, Canada, 2018, p. 4.
+    
+    \bibitem{CLEAR-MADX} \url{https://gitlab.cern.ch/CLEAR/CLEARLattice}.
+
+\end{thebibliography}
+
 
 \end{document}

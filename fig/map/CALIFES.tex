@@ -3,9 +3,18 @@
 %% K. Sjobak, 2018
 
 \begin{tikzpicture}
-    \draw[<-,ultra thick] (-1,0)--(15,0);
+
+    %EOS table
+    \filldraw[green] (4.9,-0.4) rectangle (2.9,0.4);
+    \filldraw[green] (4.9,-0.4) rectangle (4.7,-2);
+    \filldraw[green] (2.9,-0.4) rectangle (3.1,-2);
+    
+    %BEAM
+    \draw[latex-,ultra thick] (0,0)--(15,0);
+    \draw[ultra thick, dashed] (-1,0) -- (0,0);
     
     %% GUN
+    \node at (15,1) {\belemsiz 0.0~m};
     
     % Gun solenoids
     \solRect{15}{0.5}{14}{0.7}
@@ -31,25 +40,37 @@
          \belemsiz SNI 120};
     
     \correctorMagnet{13.7}{DG 130};
+    \node at (13.7,1) {\belemsiz 0.32~m};
     
     %Laser mirror
     \draw[ultra thick]  ({(13.7-13)/2+13 + 0.1}, -0.1) --
                         ({(13.7-13)/2+13 - 0.1}, -0.3);
+    
     %Laser
-    \draw[thick,-latex,green]
-        ({(13.7-13)/2+13},-2) --
+    \draw[thick,-latex,dashed]
+        ({(13.7-13)/2+13},-2.25) --
         ({(13.7-13)/2+13},-0.2) -- 
         (15,0);
+        
+    %Laser table
+    \BTV[-2.25]{14}{};
+    \draw[thick, -latex, dashed]
+        (13,-2.25) -- (14,-2.25);
+    \node at (14.9,-2.25) {\belemsiz BTV125};
     
+    \draw[ultra thick] ({(13.7-13)/2+13-0.25/2}, -2.25-0.25/2) -- 
+                       ({(13.7-13)/2+13+0.25/2}, -2.25+0.25/2);
     
     %ICT 210
     \filldraw[purple] (13.,-0.5) rectangle (12.75,0.5);
     \node[rotate=-90,anchor=west] at (12.75+0.25/2,-0.7) {\belemsiz ICT 210};
 
-    \BTV{12.35}{MTV 215}
+    \BTV{12.35}{MTV 215};
+    \node at (12.35,0.7) {\belemsiz 1.81~m};
     
-    \cBPM{11.8}{BPM 220}
+    \cBPM{11.8}{BPC 220}{0.15};
     \correctorMagnet{11.5}{DG 225};
+    \node at (11.5,1) {\belemsiz 2.18~m};
     
     \draw[ultra thick, orange] (11.3,-0.4) rectangle (10.2,0.4);
     
@@ -64,8 +85,9 @@
          \belemsiz DB 230-S\\
          \belemsiz SNG 230};
     
-    \cBPM{9.9}{BPM 240}
+    \cBPM{9.9}{BPC 240}{0.15};
     \correctorMagnet{9.6}{DG 245};
+    \node at (9.6,1) {\belemsiz 7.33~m};
     
     \draw[ultra thick, orange] (9.3,-0.4) rectangle (8.2,0.4);
     \node[rotate=-90,anchor=west, align=left] at (8.2+1.1/2,-0.7) {\belemsiz ACS 250\\
@@ -74,46 +96,63 @@
     \solRect{9.3}{0.5}{8.2}{0.7};
     \solRect{9.3}{-0.5}{8.2}{-0.7};
     
-    \cBPM{7.9}{BPM 260}
+    \cBPM{7.9}{BPC 260}{0.15};
     \correctorMagnet{7.6}{DG 265};
+    \node at (7.6,1) {\belemsiz 12.49~m};
     
     \draw[ultra thick, orange] (7.3,-0.4) rectangle (6.2,0.4);
     \node[rotate=-90,anchor=west] at (6.2+1.1/2,-0.7) {\belemsiz ACS 270};
     
-    \cBPM{5.9}{BPM 310}
+    \cBPM{5.9}{BPC 310}{0.15};
     \correctorMagnet{5.6}{DG 320};
+    \node at (5.6,1) {\belemsiz 17.70~m};
     
     \kickerHV[0]{5.125}{SDH 340}{-1}{orange};
 
     %\draw[ultra thick, purple] (4.15,-0.15) rectangle (3.85,0.15);
     
-    \lensF{4.5}{QFD 350};
-    \lensD{4.0}{QDD 355};
-    \lensF{3.5}{QFD 360};
+    \lensF{4.4}{QFD 350};
+    \lensD{3.9}{QDD 355};
+    \lensF{3.4}{QFD 360};
+    \node at (3.9,1) {\belemsiz 18.90~m};
+
     
-    \cBPM{3.0}{BPM 380};
-    \correctorMagnet{2.7}{DG 385};
+    %EOS table defined on top, to get behind the "beam"
+    \draw[-latex, dashed,thick] (4.8,-2) -- (4.8,-0.2) -- (3.0,-0.2) -- (3,-2);
+    %\node at (4.8,-2.25) {\belemsiz EOS laser};
+    \node at (3.9,-2.25) {\textbf{Electro-Optical Sampling}};
     
-    \BTV{2.2}{MTV 390};
+    \cBPM{2.7}{BPC 380}{0.15};
+    \correctorMagnet{2.4}{DG 385};
+    \node at (2.4,1) {\belemsiz 19.96~m};
+
+    \BTV{2.0}{MTV 390};
     
     %% VESPER
     
-    \pgfmathsetmacro{\VesperStart}{1.625};
+    \pgfmathsetmacro{\VesperStart}{1.5}; %Center of the dipole (X)
     \pgfmathsetmacro{\VesperAngle}{-22.0};
-    \pgfmathsetmacro{\VesperY}{(\VesperStart+1)*tan(\VesperAngle)};
+    %Arrow end point
+    \pgfmathsetmacro{\VesperX}{-1};
+    \pgfmathsetmacro{\VesperY}{(\VesperStart-\VesperX)*tan(\VesperAngle)};
     
-    \pgfmathsetmacro{\VesperTabX}{0.8};
+    \pgfmathsetmacro{\VesperTabX}{-0.0};
     \pgfmathsetmacro{\VesperTabY}{(\VesperStart-\VesperTabX)*tan(\VesperAngle)};
+    \filldraw[green,rotate around={-\VesperAngle:(\VesperTabX,\VesperTabY)}]
+    (\VesperTabX-0.5, \VesperTabY-0.4) rectangle
+    (\VesperTabX+0.5, \VesperTabY+0.4);
+    %\node[rotate=-90,anchor=west] at (\VesperTabX,\VesperTabY-0.7) {\belemsiz VESPER};
+    \node at (\VesperTabX+0.4, -2.25) {\textbf{VESPER}};
     
-    \filldraw[green,rotate around={\VesperAngle:(\VesperTabX,\VesperTabY}]
-    (\VesperTabX-0.5, \VesperTabY-0.5) rectangle
-    (\VesperTabX+0.5, \VesperTabY+0.5);
+    \filldraw[gray,rotate around={-\VesperAngle:(\VesperX,\VesperY)}]
+    (\VesperX-0.05, \VesperY-0.5) rectangle
+    (\VesperX+0.05, \VesperY+0.5);
     
-    \draw[->,ultra thick] (\VesperStart,0)--(-1,\VesperY);
+    \draw[->,ultra thick] (\VesperStart,0)--(\VesperX,\VesperY);
     
     \kickerHV[0]{\VesperStart}{BHB 400}{1}{blue};
     
-    \pgfmathsetmacro{\VesperBTVaX}{0.8};
+    \pgfmathsetmacro{\VesperBTVaX}{0.9};
     \pgfmathsetmacro{\VesperBTVaY}{(\VesperStart-\VesperBTVaX)*tan(\VesperAngle)};
     \BTV[\VesperBTVaY]{\VesperBTVaX}{BTV420}
     
