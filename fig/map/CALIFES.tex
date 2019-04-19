@@ -62,8 +62,8 @@
                        ({(13.7-13)/2+13+0.25/2}, -2.25+0.25/2);
     
     %ICT 210
-    \filldraw[purple] (13.,-0.5) rectangle (12.75,0.5);
-    \node[rotate=-90,anchor=west] at (12.75+0.25/2,-0.7) {\belemsiz ICT 210};
+    \filldraw[purple] (12.95-0.1/2,-0.3) rectangle (12.95+0.1/2,0.3);
+    \node[rotate=-90,anchor=west] at (12.95,-0.7) {\belemsiz ICT 210};
 
     \BTV{12.35}{MTV 215};
     \node at (12.35,0.7) {\belemsiz 1.81~m};
@@ -142,11 +142,11 @@
     (\VesperTabX-0.5, \VesperTabY-0.4) rectangle
     (\VesperTabX+0.5, \VesperTabY+0.4);
     %\node[rotate=-90,anchor=west] at (\VesperTabX,\VesperTabY-0.7) {\belemsiz VESPER};
-    \node at (\VesperTabX+0.4, -2.25) {\textbf{VESPER}};
+    \node at (\VesperTabX+0.4, -2.5) {\textbf{VESPER}};
     
     \filldraw[gray,rotate around={-\VesperAngle:(\VesperX,\VesperY)}]
-    (\VesperX-0.05, \VesperY-0.5) rectangle
-    (\VesperX+0.05, \VesperY+0.5);
+        (\VesperX-0.05, \VesperY-0.5) rectangle
+        (\VesperX+0.05, \VesperY+0.5);
     
     \draw[->,ultra thick] (\VesperStart,0)--(\VesperX,\VesperY);
     
@@ -155,7 +155,16 @@
     \pgfmathsetmacro{\VesperBTVaX}{0.9};
     \pgfmathsetmacro{\VesperBTVaY}{(\VesperStart-\VesperBTVaX)*tan(\VesperAngle)};
     \BTV[\VesperBTVaY]{\VesperBTVaX}{BTV420}
-    
+
+    % ICT 430
+    \pgfmathsetmacro{\VesperICTX}{0.4};
+    \pgfmathsetmacro{\VesperICTY}{(\VesperStart-\VesperICTX)*tan(\VesperAngle)};
+    \filldraw[purple,rotate around={-\VesperAngle:(\VesperICTX,\VesperICTY)}]
+        (\VesperICTX-0.1/2, \VesperICTY-0.3) rectangle
+        (\VesperICTX+0.1/2, \VesperICTY+0.3);
+
+    \node[rotate=-90,anchor=west] at (\VesperICTX,\VesperICTY-0.7) {\belemsiz ICT 430};
+
     \pgfmathsetmacro{\VesperBTVbX}{-0.5};
     \pgfmathsetmacro{\VesperBTVbY}{(\VesperStart-\VesperBTVbX)*tan(\VesperAngle)};
     \BTV[\VesperBTVbY]{\VesperBTVbX}{BTV440}
