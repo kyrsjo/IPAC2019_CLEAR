@@ -70,8 +70,9 @@
     
     \cBPM{11.8}{BPC 220}{0.15};
     \correctorMagnet{11.5}{DG 225};
-    \node at (11.5,1) {\belemsiz 2.18~m};
-    
+    %\node at (11.5,1) {\belemsiz 2.18~m}; !Moved to the bottom, to be on top of RF network
+
+    %ACS 230
     \draw[ultra thick, orange] (11.3,-0.4) rectangle (10.2,0.4);
     
     \solRect{11.3}{0.6}{10.2}{0.7}
@@ -87,8 +88,9 @@
     
     \cBPM{9.9}{BPC 240}{0.15};
     \correctorMagnet{9.6}{DG 245};
-    \node at (9.6,1) {\belemsiz 7.33~m};
-    
+    %\node at (9.6,1) {\belemsiz 7.33~m}; !Moved to bottom
+
+    % ACS 250
     \draw[ultra thick, orange] (9.3,-0.4) rectangle (8.2,0.4);
     \node[rotate=-90,anchor=west, align=left] at (8.2+1.1/2,-0.7) {\belemsiz ACS 250\\
      \belemsiz SNG 250};
@@ -98,8 +100,9 @@
     
     \cBPM{7.9}{BPC 260}{0.15};
     \correctorMagnet{7.6}{DG 265};
-    \node at (7.6,1) {\belemsiz 12.49~m};
-    
+    %\node at (7.6,1) {\belemsiz 12.49~m}; !Moved to bottom
+
+    % ACS 270
     \draw[ultra thick, orange] (7.3,-0.4) rectangle (6.2,0.4);
     \node[rotate=-90,anchor=west] at (6.2+1.1/2,-0.7) {\belemsiz ACS 270};
     
@@ -169,5 +172,43 @@
     \pgfmathsetmacro{\VesperBTVbY}{(\VesperStart-\VesperBTVbX)*tan(\VesperAngle)};
     \BTV[\VesperBTVbY]{\VesperBTVbX}{BTV440}
     
+    %% RF SYSTEM %%
+
+    % MKS15
+    \filldraw[orange] (12.35,1.0) -- (12.35+0.5,2) -- (12.35-0.5,2) -- cycle;
+
+    \draw[-latex,orange,ultra thick] (12.35,1.75) -- (11.3,1.75) -- (11.3,0.4);
+
+    \filldraw[orange!50] (11.6,1.75) circle (0.25);
+    \node at (11.6,1.75) {\belemsiz $\Delta \Phi$};
+
+    \draw[-latex,orange,ultra thick] (12.35,1.75) -- (14.5+0.15/2,1.75) -- (14.5+0.15/2,0.4);
+
+    \filldraw[orange!50] (14,1.75) circle (0.25);
+    \node at (14,1.75) {\belemsiz $\Delta \Phi$};
+
+    \filldraw[orange!50] (13.25,1.75) circle (0.25);
+    \node at (13.25,1.75) {\belemsiz $\Delta P$};
+
+    \node[align=center,anchor=north] at (12.35,2) {\belemsiz MKS\\ \belemsiz 15};
+
+    % MKS10
+    \filldraw[orange] (10.7,1.0) -- (10.7+0.5,2) -- (10.7-0.5,2) -- cycle;
+    \draw[orange, ultra thick, -latex] (10.5,1.75) -- (9.3,1.75) -- (9.3,0.4);
+    \draw[orange, ultra thick, -latex] (10.5,1.75) -- (7.3,1.75) -- (7.3,0.4);
+
+    \node[align=center,anchor=north] at (10.7,2) {\belemsiz MKS\\ \belemsiz 10};
+
+    % MKS31
+    \filldraw[orange] (6.4,1.0) -- (6.4+0.5,2) -- (6.4-0.5,2) -- cycle;
+    \draw[orange, ultra thick, -latex] (6.4,1.75) -- (5.125,1.75) -- (5.125,0.6);
+%    \draw[orange, ultra thick, -latex] (10.5,1.75) -- (7.3,1.75) -- (7.3,0.4);
+
+    \node[align=center,anchor=north] at (6.4,2) {\belemsiz MKS\\ \belemsiz 31};
+
+    % Text on top of the orange
+    \node at (11.5,1) {\belemsiz 2.18~m};
+    \node at (9.6,1) {\belemsiz 7.33~m};
+    \node at (7.6,1) {\belemsiz 12.49~m};
     
 \end{tikzpicture}
