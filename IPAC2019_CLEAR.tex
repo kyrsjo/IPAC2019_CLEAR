@@ -96,7 +96,7 @@ The CLEAR facility was built from the probe beam injector CALIFES at CTF3, reusi
 The current beamline layout is illustrated in Fig.~\ref{fig:layout}, and a Mad-X model is available~\cite{CLEAR-MADX}.
 
 The main purpose of CLEAR is to provide a test-bed for new accelerator technologies including beam instrumentation, plasma devices, X-band accelerating structures, and more.
-Also hosted is a varied program of irradiation with electron beams, including tests of high-energy electron therapy techniques and simulation of the radiation environment around Jupiter for the JUICE mission.
+Also hosted is a varied program of irradiation with electron beams, including tests for high-energy electron radio therapy techniques and validation of electronic components which must survive the radiation environment around Jupiter for the JUICE mission.
 This is achieved by having a flexible, easily accessible and modifiable beam-line with a wide span of available parameters.
 Typically, the tunnel is accessible for up to one day per week for experiment installation and/or modification, which makes the setup of an experiment very easy.
 In cases where more accesses have been needed (e.g.\ for irradiation), this has also been possible.
@@ -104,34 +104,36 @@ In cases where more accesses have been needed (e.g.\ for irradiation), this has 
 As seen from the layout, the CLEAR machine is well equipped with diagnostics for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
 This makes it easier to setup a wide variety of beams for the hosted experiments.
 
+CLEAR typically runs during normal weekdays, for 9 hours or more each day, depending on the experiment being ran and operator availability.
+Access is typically possible every monday morning.
+In 2018, there was a total of 32 weeks of operation, split over two runs with a shutdown in the summer to prepare for Xbox-1 connection to the X-band accelerating structures and for cooling tower maintainance.
 Unlike the rest of the CERN accelerator complex, CLEAR will be kept running throughout Long Shutdown 2.
 
-\todo[inline]{Typical run schedule, days of running in 2018}
-
-\begin{figure*}
+\begin{figure*}[t]
+  \centering
+  \begin{subfigure}{\textwidth}
     \centering
-    \begin{subfigure}[h]{\textwidth}
-        \centering
-        \input{fig/map/CALIFES.tex}
-        \vspace{-2em} % Eat the space taken by some empty nodes
-        \caption{CALIFES injector}
-    \end{subfigure}
-    \begin{subfigure}[h]{\textwidth}
-        \centering
-        \vspace{-1em}
-        \input{fig/map/EXPERIMENTAL1.tex}
-        \vspace{-0.5em}
-        \caption{Experimental beamline
-        (continues after CALIFES, shown above)}
-    \end{subfigure}
-    \begin{subfigure}[h]{\textwidth}
-        \centering
-        \input{fig/map/LEGEND.tex}
-        \vspace{-2em} % Eat the space taken by some empty nodes
-        \caption{Symbols}
-    \end{subfigure}
-    \caption{Overview of the elements directly interacting with the beam at CLEAR beamline, and the location of the experimental stations as of April 2019. Element positions indicate the middle of each element, rounded to the nearest cm.}
-    \label{fig:layout}
+    \input{fig/map/CALIFES.tex}
+    \vspace{-2.5em} % Eat the space taken by some empty nodes
+    \caption{CALIFES injector}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \centering
+    \vspace{-1em}
+    \input{fig/map/EXPERIMENTAL1.tex}
+    \vspace{-0.5em}
+    \caption{Experimental beamline
+      (continues after CALIFES, shown above)}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \centering
+    \vspace{-0.5em}
+    \input{fig/map/LEGEND.tex}
+    \vspace{-2em} % Eat the space taken by some empty nodes
+    \caption{Symbols}
+  \end{subfigure}
+  \caption{Overview of the elements directly interacting with the beam at CLEAR beamline, and the location of the experimental stations as of April 2019. Element positions indicate the middle of each element, rounded to the nearest cm.}
+  \label{fig:layout}
 \end{figure*}
 
 \section{Operation and Performance}
@@ -145,7 +147,7 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
     \textbf{Parameter} & \textbf{Value} \\
     \midrule
     Beam energy       &  60~MeV -- 220~MeV\\
-    Beam charge       &  10~pC  -- 1.5~nC \\
+    Bunch charge      &  10~pC  -- 1.5~nC \\
     Bunch length      &   1~ps  -- 3~ps \\
     Bunch frequency   &   1.5~GHz \\
     RF frequency      &   3.0~GHz \\
@@ -181,15 +183,15 @@ Based on the alignment of the quadrupole beam-pipes and a point provided on the 
 
 The vacuum control system is also under consolidation, moving all the ion pump controllers into the same building and updating the interlock system and control system.
 
-The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified 
+The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified to work with the lower bunch charges of CLEAR and are currently in the process of being fully comissioned.
 
 One issue that was found and corrected during the shutdown 2018/2019 winter shut-down was the calibration of the beam charge monitors.
 These devices are Integrating Current Transformers~\cite{BergozICT}, and 3 such devices are installed in the CLEAR linac and used as the main beam charge monitoring devices.
 They are connected to an integrating circuit in the gallery, which computes the total charge within a time-window, and creates a long voltage pulse at a level proportional to the charge.
 The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
-The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}.
+The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
 
-In general... stability etc.
+\todo[inline]{In general... stability etc.}
 
 \section{Overview of experimental program}
 
