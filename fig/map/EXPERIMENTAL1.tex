@@ -130,7 +130,14 @@
 
     %% RF SYSTEM
     \filldraw[orange] (11.5,0.5) -- (11.5+0.5,1.5) -- (11.5-0.5,1.5) -- cycle;
-    \draw[ultra thick, orange, -latex] (11.5,1.25) -- (9.5,1.25);
+    \draw[ultra thick, orange,] (11.5,1.25) -- (9.6,1.25);
+    \draw[ultra thick, orange, dashed, -latex] (9.6,1.25) -- (9.6,0.4);
+    \draw[ultra thick, orange, dashed, -latex] (9.6,1.25) -- (9.6,0.8) -- (10.1,0.8) -- (10.1,0.4);
     \node[align=center,anchor=north] at (11.5,1.5) {\belemsiz MKX\\ \belemsiz 1};
 
-\end{tikzpicture}
+  \end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../IPAC2019_CLEAR.tex"
+%%% End:

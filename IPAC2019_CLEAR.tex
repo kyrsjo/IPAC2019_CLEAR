@@ -106,6 +106,8 @@ This makes it easier to setup a wide variety of beams for the hosted experiments
 
 Unlike the rest of the CERN accelerator complex, CLEAR will be kept running throughout Long Shutdown 2.
 
+\todo[inline]{Typical run schedule, days of running in 2018}
+
 \begin{figure*}
     \centering
     \begin{subfigure}[h]{\textwidth}
@@ -134,9 +136,9 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
 
 \section{Operation and Performance}
 
-\begin{table}[b]
+\begin{table}[t]
   \centering
-  \caption{Typical beam parameters at the exit of the CALIFES injector.}
+  \caption{Typical beam parameters.}
   \label{tab:beamparameters}
   \begin{tabular}{c c}
     \toprule
@@ -156,15 +158,6 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
   \end{tabular}
 \end{table}
 
-\todo[inline]{
- * Improvements and changes since last year\\
- * Inductive BPM consolidation\\
- * Camera system\\
- * Laser system\\
- * New parameter space within reach?\\
- * Vacuum consolidation
-}
-
 While CLEAR can provide a wide range of beams, the typical beam parameters are listed in Table~\ref{tab:beamparameters}.
 This refers to a beam produced using the photocathode laser, which is the normally used arrangement.
 Here the number of bunches, the bunch charge, and the train repetition rate is controlled via the laser parameters~\cite{LucaGun,BrossardGun}.
@@ -173,36 +166,38 @@ Recently, the control of this system has been significantly improved, by changin
 This means that the beam position is easily repeatable.
 Furthermore, an adjustable telescope has been added which allows to change the focus of the laser on the photocathode, and thus increasing the laser spotsize to avoid saturation when working with high-charge bunches.
 Finally, the laser stability has been improved, resulting in much less pointing jitter and higher beam quality.
-Additionally it is also possible to collect and accelerate the dark current produced by the gun in order to make a long train with sub-pC bunch charge; this is sometimes used for irradiation.
-
-%Most of the improvements since last IPAC~\cite{Corsini:FirstCLEAR} have been related to consolidation of the accelerator and 
+Additionally it is also possible to collect and accelerate the dark current produced by the gun in order to make a long train with sub-pC bunch charge; this is sometimes used for radiation hardness testing of electronics.
 
 For the RF system, the connection of the MKS31 klystron to the SDH~340 RF deflector was completed, as was the upgrades of the modulators for the other klystrons.
-This has helped RF system reliability, and also 
+This has helped RF system reliability, as well as brought the control system in line with current standards.
 
-Consolidation of klystron hardware
-
-Laser/dark current beam
-
-FESA upgrades
+%FESA upgrades
 
 On the beam-line, two quadrupoles QDD870 and QFD880 have been installed in order to provide a narrow beam-spot into the In-Air test area and to measure the beam emittance after the plasma lens using the quadrupole tuning method.
-Furthermore 
+Furthermore, the corrector 590 was moved upstream by 460~mm, in order to have the BPMs now named 595 and 610 installed after the orbit bump made by corrector 540 and 590.
+The alignment of the quadrupoles and the accelerating structures has generally been verified and corrected by the survey group.
+The beam-pipe passing through the quadrupoles were then aligned relatively to the magnets using a conical clamp.
+Based on the alignment of the quadrupole beam-pipes and a point provided on the final dump, the rest of the machine was aligned using a laser passed through the center of the beam pipe from one end to the other.
 
-Alignment -- last quads, structure, verification of rest of quads, aperture.
+The vacuum control system is also under consolidation, moving all the ion pump controllers into the same building and updating the interlock system and control system.
+
+The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified 
 
 One issue that was found and corrected during the shutdown 2018/2019 winter shut-down was the calibration of the beam charge monitors.
 These devices are Integrating Current Transformers~\cite{BergozICT}, and 3 such devices are installed in the CLEAR linac and used as the main beam charge monitoring devices.
 They are connected to an integrating circuit in the gallery, which computes the total charge within a time-window, and creates a long voltage pulse at a level proportional to the charge.
 The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
+The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}.
 
-
+In general... stability etc.
 
 \section{Overview of experimental program}
 
 There are a number of experimental stations along the beam line, as marked in green on Figure~\ref{fig:layout}.
 Some of these host permanently installed experiments like the CLIC test area and the Plasma Lens Experiment.
 Others are used for more temporary experiments, such as VESPER, which is used to host various irradiation tests; or the In-air test area which is used for tests of THz generation, as well as protoype advanced beam instrumentation for beam position and bunch length measurement.
+
+Smaller experiments -- stray field
 
 \subsection{VESPER electronic component irradiation}
 
@@ -237,6 +232,8 @@ The plasma lens experiment
 
 \section{Conclusion}
 
+\ldots
+
 \begin{thebibliography}{9} % Use for 1-9 references
 \bibitem{Gamba::CLEAR} D. Gamba et al., “The CLEAR user facility at CERN,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Dec. 2017.
 
@@ -250,6 +247,9 @@ The plasma lens experiment
 
 \bibitem{BrossardGun} J. Brossard, M. Desmons, B. M. Mercier, C. P. Prevost, and R. Roux, “Construction of the Probe Beam Photo-injector of CTF3,” 2006, p. 3.
 
+\bibitem{MarisTali:E-SEU} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Upsets in Medical and Experimental Linacs,” IEEE Transactions on Nuclear Science, vol. 65, no. 8, pp. 1715–1723, Aug. 2018.
+
+\bibitem{Antonio::IEEE-Kicks} P. Arpaia, R. Corsini, A. Gilardi, and K. N. Sjobak, “Beam–based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proceedings of the International Instrumentation and Measurement Technology Conference, May 2019.
 
 \end{thebibliography}
 
