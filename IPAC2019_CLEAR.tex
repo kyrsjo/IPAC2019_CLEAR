@@ -98,17 +98,17 @@ The current beamline layout is illustrated in Fig.~\ref{fig:layout}, and a Mad-X
 The main purpose of CLEAR is to provide a test-bed for new accelerator technologies including beam instrumentation, plasma devices, X-band accelerating structures, and more.
 Also hosted is a varied program of irradiation with electron beams, including tests for high-energy electron radio therapy techniques and validation of electronic components which must survive the radiation environment around Jupiter for the JUICE mission.
 This is achieved by having a flexible, easily accessible and modifiable beam-line with a wide span of available parameters.
-Typically, the tunnel is accessible for up to one day per week for experiment installation and/or modification, which makes the setup of an experiment very easy.
+Typically, the tunnel is accessible every monday for experiment installation and/or modification, which makes the setup and modification experiments very easy and convenient.
 In cases where more accesses have been needed (e.g.\ for irradiation), this has also been possible.
+The radiation levels are generally low, which makes it possible to use a wide range of equipment.
+CLEAR is also functioning as a visit point at CERN, recieving both groups and VIPs in order to teach and demostrate accelerator research facilities.
+Aditionally, due to the relative simplicity of the machine and the fact that it is hard to damage through beam losses etc., it has also been used to provide training for students through programs such as JUAS.
 
-\todo[inline]{Low radiation levels}
-
-As seen from the layout, the CLEAR machine is well equipped with diagnostics\todo{cross-comparison} for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
-This makes it easier to setup a wide variety of beams for the hosted experiments.
+As seen from the layout, the CLEAR machine is well equipped with diagnostics for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
+This makes it possible to quickly setup a wide variety of beams for the hosted experiments, and to cross-compare different diagnostics including prototypes.
 
 CLEAR typically runs during normal weekdays, for 9 hours or more each day, depending on the experiment being ran and operator availability.
-Access is typically possible every monday morning.
-In 2018, there was a total of 32 weeks of operation, split over two runs with a shutdown in the summer to prepare for Xbox-1 connection to the X-band accelerating structures and for cooling tower maintainance.
+In 2018, there was a total of 32 weeks of operation, split over two runs with a shutdown in the summer to prepare for Xbox-1 connection to the X-band accelerating structures and for general maintainance of the facility.
 Unlike the rest of the CERN accelerator complex, CLEAR will be kept running throughout Long Shutdown 2.
 
 \begin{figure*}[t]
@@ -170,7 +170,9 @@ Recently, the control of this system has been significantly improved, by changin
 This means that the beam position is easily repeatable.
 Furthermore, an adjustable telescope has been added which allows to change the focus of the laser on the photocathode, and thus increasing the laser spotsize to avoid saturation when working with high-charge bunches.
 Finally, the laser stability has been improved, resulting in much less pointing jitter and higher beam quality.
-\todo[inline]{Double-pulse setup}
+A double-pulse setup has been created, making it possible to double up each pulse of the laser through an optical delay line.
+This will make it possible to inject two bunches into the same RF bucket, with adjustable distance.
+
 Additionally it is also possible to collect and accelerate the dark current produced by the gun in order to make a long train with sub-pC bunch charge; this is sometimes used for radiation hardness testing of electronics.
 
 For the RF system, the connection of the MKS31 klystron to the SDH~340 RF deflector was completed, as was the upgrades of the modulators for the other klystrons.
@@ -183,6 +185,7 @@ Furthermore, the corrector 590 was moved upstream by 460~mm, in order to have th
 The alignment of the quadrupoles and the accelerating structures has generally been verified and corrected by the survey group.
 The beam-pipe passing through the quadrupoles were then aligned relatively to the magnets using a conical clamp.
 Based on the alignment of the quadrupole beam-pipes and a point provided on the final dump, the rest of the machine was aligned using a laser passed through the center of the beam pipe from one end to the other.
+This reduced beam losses, and reduced the time needed to setup a beam, especially for the experiments located after the CLIC test area.
 
 The vacuum control system is also under consolidation, moving all the ion pump controllers into the same building and updating the interlock system and control system.
 
@@ -194,24 +197,28 @@ They are connected to an integrating circuit in the gallery, which computes the 
 The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
 The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
 
-\todo[inline]{In general... stability etc.}
+%\todo[inline]{In general... stability etc.}
 
 \section{Overview of experimental program}
 
 There are a number of experimental stations along the beam line, as marked in green on Figure~\ref{fig:layout}.
 Some of these host permanently installed experiments like the CLIC test area and the Plasma Lens Experiment.
 Others are used for more temporary experiments, such as VESPER, which is used to host various irradiation tests; or the In-air test area which is used for tests of THz generation, as well as protoype advanced beam instrumentation for beam position and bunch length measurement.
+
 Some experiments are also using the whole or parts of the machine itself as an experimental facility, such as beam dynamics studies of the RF-gun, or measurements of magnetic stray field spectra in beam facilities to benchmark models for CLIC.
-Aditionally, due to the relative simplicity of the machine and the fact that it is hard to damage through beam losses etc., it has also been used to provide training for students through programs such as JUAS.
-
-\todo[inline]{Testing of AWAKE spectrometer screen}
-
-\todo[inline]{EOS / streak UPGRADES}
 
 \subsection{VESPER electronic component irradiation}
+The VESPER test area is mainly used for irradiation of electronic components, in order to verify their functionality in radiation environments.
+The main user here has been the JUICE mission~\cite{MarisTali:E-SEU,MarisTali:E-SEL,RubenAlia::CLEARrev}, however tests of components for ATLAS have also been done.
+These experiments have sometimes been run in automated mode over nights and weekends, requiring only a low-intensity dark current beam.
 
 \subsection{Medical irradiation tests}
-Beamline unmounting...
+% \begin{figure}
+%   \includegraphics[width=\columnwidth]{fig/MedicalInstall_crop.jpg}
+%   \caption{Temporarilly installed irradiation test.}
+% \end{figure}
+Several tests of medical irradiation have been done at CLEAR~\cite{Wilfrid::CLEARrev}, both at VESPER, and at a temporarilly constructed target station immediately after QFD~520.
+This was done to test the effects of FLASH irradiation\todo{cite} in biological samples, and the use of steeply converging energetic electron beams for conformal irradiation\todo{cite}.
 
 \subsection{CLIC module tests}
 The CLIC test area contains two CLIC-type accelerating structures with integrated damping of long range wake fields\todo{cite}, mounted on a movable girder\todo{cite}.
@@ -246,6 +253,10 @@ This is used for experiments in Terrahertz generation~\cite{CurcioPRAB} and test
 
 \section{Near-term plans}
 
+An upgrade of the current analog BTV beam observation system, which is heavily used for both beam setup and experiments, is under testing.
+As a test, a Bassler Gig-E camera has been installed at BTV 620, sharing the light from that camera using an optical beam splitting mirror.
+This has shown that such cameras can function in the environment at CLEAR.
+
 As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station\todo{cite} to the CLIC accelerating super-structure has been built\todo{cite}, however due to technical issues with the klystron it is not yet connected.
 We expect this to happen during 2019, and will enable experiments \todo{...} as well as increased energy for the last part of the experimental beamline.
 
@@ -274,6 +285,12 @@ CITE~\cite{Roberto::CLEARrev}
 \bibitem{MarisTali:E-SEU} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Upsets in Medical and Experimental Linacs,” IEEE Transactions on Nuclear Science, vol. 65, no. 8, pp. 1715–1723, Aug. 2018.
 
 \bibitem{Antonio::IEEE-Kicks} P. Arpaia, R. Corsini, A. Gilardi, and K. N. Sjobak, “Beam–based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proceedings of the International Instrumentation and Measurement Technology Conference, May 2019.
+
+\bibitem{MarisTali:E-SEL} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Latchup,” IEEE Transactions on Nuclear Science, vol. 66, no. 1, pp. 437–443, Jan. 2019.
+
+\bibitem{RubenAlia::CLEARrev} Rubén García Alía, Maris Tali, ``VESPER and R2E activities,'' presetned at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304093/}
+
+\bibitem{Wilfrid::CLEARrev} W. Farabolini, R. Corsini, D. Gamba, K.N. Sjobak, L. Garolfi, A. Gilardi, E. Senes, A. Lagzda, R. Jones, K. Kokurewicz, E. Brunetti, A. Subiel, M. McManus, F. Romano, M.-C. Vozerin, P. Goncalves, C. Bailat, ``VHEE and FLASH Medical Studies,'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304095/}
 
 \bibitem{KyrreSjobak::CLICWS19} Kyrre Sjobak, ``Tests of Wakefield Monitors (WFMs) at CLEAR'', presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3285765/}
 
