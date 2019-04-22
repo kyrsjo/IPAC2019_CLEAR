@@ -92,19 +92,19 @@
 
 \section{Introduction}
 
-The CLEAR facility was built from the probe beam injector CALIFES at CTF3, reusing and upgrading the accelerator part and installing several new experiments~\cite{Gamba::CLEAR,Corsini:FirstCLEAR}.
+The CLEAR facility was built from the probe beam injector CALIFES at CTF3, reusing and upgrading the accelerator part and installing several new experiments~\cite{Gamba::CLEAR,Corsini:FirstCLEAR,CLEAR-WEB}.
 The current beamline layout is illustrated in Fig.~\ref{fig:layout}, and a Mad-X model is available~\cite{CLEAR-MADX}.
 
 The main purpose of CLEAR is to provide a test-bed for new accelerator technologies including beam instrumentation, plasma devices, X-band accelerating structures, and more.
 Also hosted is a varied program of irradiation with electron beams, including tests for high-energy electron radio therapy techniques and validation of electronic components which must survive the radiation environment around Jupiter for the JUICE mission.
 This is achieved by having a flexible, easily accessible and modifiable beam-line with a wide span of available parameters.
 Typically, the tunnel is accessible every monday for experiment installation and/or modification, which makes the setup and modification experiments very easy and convenient.
-In cases where more accesses have been needed (e.g.\ for irradiation), this has also been possible.
+In cases where more frequent accesses have been needed (e.g.\ for irradiation), this has also been possible.
 The radiation levels are generally low, which makes it possible to use a wide range of equipment.
-CLEAR is also functioning as a visit point at CERN, recieving both groups and VIPs in order to teach and demostrate accelerator research facilities.
-Aditionally, due to the relative simplicity of the machine and the fact that it is hard to damage through beam losses etc., it has also been used to provide training for students through programs such as JUAS.
+CLEAR is also functioning as a visit point at CERN, recieving a diverse range of groups in order to teach and demostrate accelerator research facilities.
+Aditionally, due to the relative simplicity of the machine and the fact that it is hard to damage through beam losses etc., it has also been used to provide training for students through programs such as JUAS~\cite{JUAS19}.
 
-As seen from the layout, the CLEAR machine is well equipped with diagnostics~\cite{HelenPHELMA} for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
+As seen from the layout, the CLEAR machine is well equipped with diagnostics~\cite{HelenPHELMA} for measuring and optimizing the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
 This makes it possible to quickly setup a wide variety of beams for the hosted experiments, and to cross-compare different diagnostics including prototypes.
 
 CLEAR typically runs during normal weekdays, for 9 hours or more each day, depending on the experiment being ran and operator availability.
@@ -142,7 +142,7 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
 
 \begin{table}[t]
   \centering
-  \caption{Typical beam parameters.}
+  \caption{Typical range of beam parameters.}
   \label{tab:beamparameters}
   \begin{tabular}{c c}
     \toprule
@@ -155,28 +155,29 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
     RF frequency      &   3.0~GHz \\
     Number of bunches &   1 -- 200 \\
     Beam repetition rate   & 1/(1.2~s) -- 10~Hz \\
-    RMS $\epsilon_N$ at QFD350 entrance & 1~$\mu$m--15~$\mu$m\\
+    RMS energy spread & < 0.2~\% \\
+    RMS $\epsilon_N$ at QFD350 entrance & 1~$\mu$m--20~$\mu$m\\
     Typ. $\beta$ at QFD350 entrance & 5 -- 15~m \\
     Typ. $\alpha$ at QFD350 entrance & -1 to +1 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-While CLEAR can provide a wide range of beams, the typical beam parameters are listed in Table~\ref{tab:beamparameters}.
+CLEAR can provide a wide range of beams; the typical beam parameters are listed in Table~\ref{tab:beamparameters}.
 This refers to a beam produced using the photocathode laser, which is the normally used arrangement.
 Here the number of bunches, the bunch charge, and the train repetition rate is controlled via the laser parameters~\cite{LucaGun,BrossardGun}.
-Single laser pulses can be picked through a system with two fast pockel cells.
-Recently, the control of this system has been significantly improved, by changing the actuators controlling the mirror from picomotors to stepping motors.
-This means that the beam position is easily repeatable.
+Single laser pulses can be picked through a system with fast pockel cells.
+Recently, the control and repeatability of the LASER system has been significantly improved, by changing the actuators controlling the mirror from picomotors to stepping motors.
 Furthermore, an adjustable telescope has been added which allows to change the focus of the laser on the photocathode, and thus increasing the laser spotsize to avoid saturation when working with high-charge bunches.
-Finally, the laser stability has been improved, resulting in much less pointing jitter and higher beam quality.
 A double-pulse setup has been created, making it possible to double up each pulse of the laser through an optical delay line.
 This will make it possible to inject two bunches into the same RF bucket, with adjustable distance.
+%Finally, the laser stability has been improved, resulting in much less pointing jitter and higher beam quality.
 
-Additionally it is also possible to collect and accelerate the dark current produced by the gun in order to make a long train with sub-pC bunch charge; this is sometimes used for radiation hardness testing of electronics.
+It is also possible to collect and accelerate the dark current produced by the gun in order to make a long train with sub-pC bunch charge.
+This is sometimes used for radiation hardness testing of electronics.
 
 For the RF system, the connection of the MKS31 klystron to the SDH~340 RF deflector was completed, as was the upgrades of the modulators for the other klystrons.
-This has helped RF system reliability, as well as brought the control system in line with current standards.
+This has helped RF system reliability, as well as brought the control system in line with current CERN standards.
 
 %FESA upgrades
 
@@ -185,28 +186,27 @@ Furthermore, the corrector 590 was moved upstream by 460~mm, in order to have th
 The alignment of the quadrupoles and the accelerating structures has generally been verified and corrected by the survey group.
 The beam-pipe passing through the quadrupoles were then aligned relatively to the magnets using a conical clamp.
 Based on the alignment of the quadrupole beam-pipes and a point provided on the final dump, the rest of the machine was aligned using a laser passed through the center of the beam pipe from one end to the other.
-This reduced beam losses, and reduced the time needed to setup a beam, especially for the experiments located after the CLIC test area.
+This reduced beam losses, and reduced the time needed to setup a beam, especially for the experiments located after the CLIC test area, which is the main aperture restriction.
 
-The vacuum control system is also under consolidation, moving all the ion pump controllers into the same building and updating the interlock system and control system.
-
-The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified to work with the lower bunch charges of CLEAR and are currently in the process of being fully comissioned.
+%The vacuum control system is also under consolidation, moving all the ion pump controllers into the same building and updating the interlock system and control system.
 
 An on-line optics model has been implemented, allowing the operators to immediatly estimate the impact of beam optics changes~\cite{Erik::CLEARrev}.
 This has been very useful for experiments requiring precise control of beam waists such as the plasma lens experiment and CLIC module tests, as well as greatly simplifying beam setup.
 
 One issue that was found and corrected during the shutdown 2018/2019 winter shut-down was the calibration of the beam charge monitors.
-These devices are Integrating Current Transformers~\cite{BergozICT}, and 3 such devices are installed in the CLEAR linac and used as the main beam charge monitoring devices.
-They are connected to an integrating circuit in the gallery, which computes the total charge within a time-window, and creates a long voltage pulse at a level proportional to the charge.
-The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
-The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
+These devices are Integrating Current Transformers (ICTs)~\cite{BergozICT}, and 3 such devices are installed in the CLEAR linac and used as the main beam charge monitoring devices.
+%They are connected to an integrating circuit in the gallery, which computes the total charge within a time-window, and creates a long voltage pulse at a level proportional to the charge.
+%The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
+The error was due to a misunderstanding of the operation of the self-calibration system, resulting in a measured charge exactly 10 times smaller than the actual.
+The wrongly reported charge was noticed by experiments, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
 
-\section{Overview of experimental program}
+\section{Experimental program}
 
-There are a number of experimental stations along the beam line, as marked in green on Figure~\ref{fig:layout}.
+A number of experimental stations are installed along the beam line, as marked on Figure~\ref{fig:layout}.
 Some of these host permanently installed experiments like the CLIC test area and the Plasma Lens Experiment.
-Others are used for more temporary experiments, such as VESPER, which is used to host various irradiation tests; or the In-air test area which is used for tests of THz generation, as well as protoype advanced beam instrumentation for beam position and bunch length measurement.
+Others are used to host several experiments, such as VESPER and the In-air test area.
 
-Some experiments are also using the whole or parts of the machine itself as an experimental facility, such as beam dynamics studies of the RF-gun, or measurements of magnetic stray field spectra in beam facilities to benchmark models for CLIC.
+The whole or parts of the machine itself as an experimental facility, such as beam dynamics studies of the RF-gun~\cite{LucaGun}, or measurements of magnetic stray field spectra in beam facilities to benchmark models for CLIC~\cite{Gohil:IPAC19-MOPGW081}.
 
 \subsection{VESPER electronic component irradiation}
 The VESPER test area is mainly used for irradiation of electronic components, in order to verify their functionality in radiation environments.
@@ -224,12 +224,12 @@ This was done to test the effects of FLASH irradiation~\cite{FLASH2017} in biolo
 \subsection{CLIC module tests}
 The CLIC test area contains two CLIC-type accelerating structures with integrated damping of long range wake fields~\cite{Grudiev:TD26}, mounted on a movable girder~\cite{Durand-mover::AccelAlign12,Sosin-mover::IPAC12}.
 These structures were originally installed as part of the two-beam test stand, and are currently not connected to an RF power source.
-They are currently used for measurements of short-range wake field kicks~\cite{Antonio::IEEE-Kicks} and Wake field monitors~\cite{KyrreSjobak::CLICWS19}, both important for the feasibility of reaching CLIC performance goals~\cite{CLIC-CDR,CLIC-PIP}.
+They are currently used for measurements of short-range wake field kicks~\cite{Antonio::IEEE-Kicks} and Wake field monitors~\cite{KyrreSjobak::CLICWS19}, both important for reaching CLIC performance goals~\cite{CLIC-CDR,CLIC-PIP}.
 
 %Could say something of e.g. bump scan etc. here
 
 Furthermore, four CLIC-type prototype cavity BPMs are installed just downstream of the accelerating structures.
-Here, the BPMs themselves as well as the electronics are currently being tested, with initial tests indicating that a more robust in-tunnel electronics is needed~\cite{NadenauThesis}.
+Here, the BPMs themselves as well as the associated electronics are currently being tested, with initial tests indicating that a more robust in-tunnel electronics is needed~\cite{NadenauThesis}.
 This is currently under development~\cite{AlexejLyapin::CLICWS19} and we expect to test it in 2019.
 
 \subsection{Plasma lens}
@@ -240,11 +240,11 @@ This is currently under development~\cite{AlexejLyapin::CLICWS19} and we expect 
 
 Active plasma lenses is a technology enabling strongly focusing magnetic lenses for charged particle beams.
 Different from magnetic quadrupoles, they focus the beam radially, i.e.\ simultaneously in the horizontal and vertical plane.
-This removes the need for using multiple lenses to control the beam size, and may have important applications for future linear colliders~\cite{CarlApochromatic,SteinkeCoupling} and particle sources~\cite{Braun1,Braun2}.
+This removes the need for using multiple lenses to control the beam size, and may have important applications for future linear colliders~\cite{CarlApochromatic,SteinkeCoupling} and particle sources~\cite{Braun1}.
 
-The CLEAR plasma lens experiment~\cite{CLEAR-PLE,Erik::CLEARrev} has until now mainly focused on showing emittance preservation and uniformity of the focusing gradient in different gasses.
-In 2018 the effect of the gas atomic weight on the development of focusing nonlinearities was demonstrated, showing that a linear focusing field and preservation of emittance can be achieved through the use of Argon gas~\cite{CarlPRL}.
-The small emittance reachable with the CLEAR beam, making possible beam sizes below 40~\textmu m in the capillary, has enabled this experiment.
+The CLEAR plasma lens experiment~\cite{CLEAR-PLE,Erik::CLEARrev} has until now mainly focused on showing emittance preservation and (non-)uniformity of the focusing gradient in different gasses.
+In 2018 the effect of the gas type on the development of focusing nonlinearities was demonstrated, showing that a linear focusing field and preservation of emittance can be achieved through the use of Argon gas~\cite{CarlPRL}.
+%The small emittance reachable with the CLEAR beam, making possible beam sizes below 40~\textmu m in the capillary, has enabled this experiment.
 
 \subsection{In-air test stand}
 
@@ -254,8 +254,10 @@ This is used for experiments in Terrahertz generation~\cite{CurcioPRAB} and test
 \section{Near-term plans}
 
 An upgrade of the current analog BTV beam observation system, which is heavily used for both beam setup and experiments, is under testing.
-As a test, a Bassler Gig-E camera has been installed at BTV 620, sharing the light from that camera using an optical beam splitting mirror.
+As a test, a Bassler GigE camera has been installed at BTV 620, sharing the light from that camera using an optical beam splitting mirror.
 This has shown that such cameras can function in the environment at CLEAR.
+
+The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified to work with the lower bunch charges of CLEAR, and are currently in the process of being fully comissioned.
 
 As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station~\cite{Xbox1,Xboxen} to the CLIC accelerating super-structure has been built~\cite{Pitman:IPAC19-WEPRB063}, however due to technical issues with the klystron it is not yet connected.
 We expect this to happen during 2019, and will enable the resumption of high gradient studies with beam, as well as increased energy for the last part of the experimental beamline.
@@ -270,35 +272,46 @@ This will enable the installation of more experiments, as well as simplifying ex
 \begin{thebibliography}{99}
 \bibitem{Gamba::CLEAR} D. Gamba et al., “The CLEAR user facility at CERN,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Dec. 2017.
 
-\bibitem{Corsini:FirstCLEAR} R. Corsini et al., “First Experiments at the CLEAR user facility,” in Procedings of IPAC2018, Vancouver, BC, Canada, 2018, p. 4.
+\bibitem{Corsini:FirstCLEAR} R. Corsini et al., “First Experiments at the CLEAR user facility,” in Procedings of IPAC2018, Vancouver, BC, Canada, 2018.
 
-\bibitem{CLEAR-MADX} \url{https://gitlab.cern.ch/CLEAR/CLEARLattice}.
+\bibitem{CLEAR-WEB} CLEAR official website. \url{http://clear.web.cern.ch/}
+
+\bibitem{CLEAR-MADX} \url{https://gitlab.cern.ch/CLEAR/CLEARLattice}
+
+\bibitem{JUAS19} Joint Universities Accelerator Schoo (JUAS) 2019 program. \url{https://indico.cern.ch/event/779575/}
 
 \bibitem{HelenPHELMA} H. Guérin, “Development and Implementation of Diagnostics for the CLEAR Facility,” Master thesis, École nationale supérieure de physique, électronique et Matériaux (PHELMA), Grenoble Institute of Technology, 2018.
 
+\bibitem{LucaGun} L. Garolfi et al., “Beam Dynamics Studies and Instrumentation Tests for Bunch Length Measurements at CLEAR,” in Proceedings of the 29\textsuperscript{th} Linear Accelerator Conf., 2018, vol. LINAC2018.
+
+\bibitem{BrossardGun} J. Brossard, M. Desmons, B. M. Mercier, C. P. Prevost, and R. Roux, “Construction of the Probe Beam Photo-injector of CTF3,” 2006.
+
+\bibitem{Erik::CLEARrev} E. Adli, ``Plasma lens research at CLEAR,'' presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304103/}
+
 \bibitem{BergozICT} Bergoz Instrumentation, “Integrating Current Transformer User’s Manual.”.
 
-\bibitem{LucaGun} L. Garolfi et al., “Beam Dynamics Studies and Instrumentation Tests for Bunch Length Measurements at CLEAR,” in Proceedings of the 29\textsuperscript{th} Linear Accelerator Conf., 2018, vol. LINAC2018, pp. 4 pages.
-
-\bibitem{BrossardGun} J. Brossard, M. Desmons, B. M. Mercier, C. P. Prevost, and R. Roux, “Construction of the Probe Beam Photo-injector of CTF3,” 2006, p. 3.
+\bibitem{Gohil:IPAC19-MOPGW081}
+   C. G. Gohil, N. Blaskovic Kraljevic, D. Schulte, and P. Burrows,
+   \textquotedblleft{Measurements of Stray Magnetic Fields at CERN for CLIC}\textquotedblright,
+   presented at the 10th Int. Particle Accelerator Conf. (IPAC'19), Melbourne, Australia, May 2019, paper MOPGW081, this conference.
 
 \bibitem{MarisTali:E-SEU} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Upsets in Medical and Experimental Linacs,” IEEE Transactions on Nuclear Science, vol. 65, no. 8, pp. 1715–1723, Aug. 2018.
-
-\bibitem{Antonio::IEEE-Kicks} P. Arpaia, R. Corsini, A. Gilardi, and K. N. Sjobak, “Beam–based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proceedings of the International Instrumentation and Measurement Technology Conference, May 2019.
 
 \bibitem{MarisTali:E-SEL} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Latchup,” IEEE Transactions on Nuclear Science, vol. 66, no. 1, pp. 437–443, Jan. 2019.
 
 \bibitem{RubenAlia::CLEARrev} Rubén García Alía, Maris Tali, ``VESPER and R2E activities,'' presetned at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304093/}
 
-\bibitem{Wilfrid::CLEARrev} W. Farabolini, R. Corsini, D. Gamba, K.N. Sjobak, L. Garolfi, A. Gilardi, E. Senes, A. Lagzda, R. Jones, K. Kokurewicz, E. Brunetti, A. Subiel, M. McManus, F. Romano, M.-C. Vozerin, P. Goncalves, C. Bailat, ``VHEE and FLASH Medical Studies,'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304095/}
+\bibitem{Wilfrid::CLEARrev} W. Farabolini et al., ``VHEE and FLASH Medical Studies,'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304095/}
 
 \bibitem{FLASH2017} P. Montay-Gruel et al., “Irradiation in a flash: Unique sparing of memory in mice after whole brain irradiation with dose rates above 100 Gy/s,” Radiotherapy and Oncology, vol. 124, no. 3, pp. 365–369, Sep. 2017.
 
 \bibitem{Grudiev:TD26} A. Grudiev and W. Wuensch, “Design of the CLIC Main Linac Accelerating Structure for CLIC Conceptual Design Report,” presented at the LINAC’10, Tsukuba, Japan.
 
-\bibitem{Durand-mover::AccelAlign12} Mainaud Durand, H, Anastasopoulos, M, Griffet, S, Griffet, S, Rude, V, and Sosin, M, “VALIDATION OF THE CLIC ALIGNMENT STRATEGY ON SHORT RANGE,” presented at the International Workshops on Accelerator Alignment, Fermilab, Batavia, IL, USA, 2012.
+\bibitem{Durand-mover::AccelAlign12} Mainaud Durand, H, Anastasopoulos, M, Griffet, S, Griffet, S, Rude, V, and Sosin, M, “Validation of the CLIC alignment stratehy on short range,” presented at the International Workshops on Accelerator Alignment, Fermilab, Batavia, IL, USA, 2012.
 
 \bibitem{Sosin-mover::IPAC12} M. Sosin et al., “Issues and Feasibility Demonstration of Positioning Closed Loop Control for the CLIC Supporting System Using a Test Mock-up with Five Degrees of Freedom,” presented at the IPAC’12, 2012.
+
+\bibitem{Antonio::IEEE-Kicks} P. Arpaia, R. Corsini, A. Gilardi, and K. N. Sjobak, “Beam–based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proceedings of the International Instrumentation and Measurement Technology Conference, May 2019.
 
 \bibitem{KyrreSjobak::CLICWS19} Kyrre Sjobak, ``Tests of Wakefield Monitors (WFMs) at CLEAR'', presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3285765/}
 
@@ -311,17 +324,15 @@ This will enable the installation of more experiments, as well as simplifying ex
 
 \bibitem{CarlApochromatic} C. A. Lindstrøm and E. Adli, “Design of general apochromatic drift-quadrupole beam lines,” Physical Review Accelerators and Beams, vol. 19, no. 7, Jul. 2016.
 
-\bibitem{Erik::CLEARrev} E. Adli, ``Plasma lens research at CLEAR,'' presented at the CLAER review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304103/}
-
 \bibitem{SteinkeCoupling} S. Steinke et al., “Multistage coupling of independent laser-plasma accelerators,” Nature, vol. 530, no. 7589, pp. 190–193, Feb. 2016.
 
 \bibitem{CLEAR-PLE} C. A. Lindstrøm et al., “Overview of the CLEAR plasma lens experiment,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, vol. 909, pp. 379–382, Nov. 2018.
 
 \bibitem{CarlPRL} C. A. Lindstrøm et al., “Emittance Preservation in an Aberration-Free Active Plasma Lens,” Phys. Rev. Lett., vol. 121, no. 19, p. 194801, Nov. 2018.
 
-\bibitem{Braun1} H. Braun, E. Boggasch, D. H. H. Hoffmann, and A. Tauschwitz, “Application of Plasma Lenses in Positron Sources,” p. 3.
+\bibitem{Braun1} H. Braun, E. Boggasch, D. H. H. Hoffmann, and A. Tauschwitz, “Application of Plasma Lenses in Positron Sources,” EPAC'92.
 
-\bibitem{Braun2} H. Braun, “Positrons for Accelerators,” PhD, University of Zürich, Zürich, Switzerland, 1992.
+%\bibitem{Braun2} H. Braun, “Positrons for Accelerators,” PhD, University of Zürich, Zürich, Switzerland, 1992.
 
 \bibitem{Thibaut::CLEARrev} T. Lefevre, ``Diagnostics and THz activities'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304102/}
 
@@ -329,7 +340,7 @@ This will enable the installation of more experiments, as well as simplifying ex
 
 \bibitem{Xbox1} J. W. Kovermann et al., “Commissioning of the First Klystron-based X-band Power Source at CERN,” presented at the IPAC’12, 2012.
 
-\bibitem{Xboxen} N. Catalán Lasheras et al., “Experience Operating an X-band High-Power Test Stand at CERN,” in Proceedings of the 5th Int. Particle Accelerator Conf., 2014, vol. IPAC2014, pp. 3 pages, 0.868 MB.
+\bibitem{Xboxen} N. Catalán Lasheras et al., “Experience Operating an X-band High-Power Test Stand at CERN,” in Proceedings of the 5th Int. Particle Accelerator Conf., 2014, vol. IPAC2014.
 
 \bibitem{Pitman:IPAC19-WEPRB063}
    S. Pitman, N. Catalan-Lasheras, V. del Pozo Romano, G. McMonagle, B. J. Woolley, and A. V. Edwards,
