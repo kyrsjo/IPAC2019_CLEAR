@@ -104,7 +104,7 @@ The radiation levels are generally low, which makes it possible to use a wide ra
 CLEAR is also functioning as a visit point at CERN, recieving both groups and VIPs in order to teach and demostrate accelerator research facilities.
 Aditionally, due to the relative simplicity of the machine and the fact that it is hard to damage through beam losses etc., it has also been used to provide training for students through programs such as JUAS.
 
-As seen from the layout, the CLEAR machine is well equipped with diagnostics for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
+As seen from the layout, the CLEAR machine is well equipped with diagnostics~\cite{HelenPHELMA} for measuring the beam parameters such as bunch charge and train length, bunch length, energy- and energy-spread, and Twiss parameters, as well as combinations thereof.
 This makes it possible to quickly setup a wide variety of beams for the hosted experiments, and to cross-compare different diagnostics including prototypes.
 
 CLEAR typically runs during normal weekdays, for 9 hours or more each day, depending on the experiment being ran and operator availability.
@@ -197,7 +197,7 @@ They are connected to an integrating circuit in the gallery, which computes the 
 The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
 The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
 
-%\todo[inline]{In general... stability etc.}
+\todo[inline]{On-line model}
 
 \section{Overview of experimental program}
 
@@ -225,10 +225,10 @@ The CLIC test area contains two CLIC-type accelerating structures with integrate
 These structures were originally installed as part of the two-beam test stand, and are currently not connected to an RF power source.
 They are currently used for measurements of short-range wake field kicks~\cite{Antonio::IEEE-Kicks} and Wake field monitors~\cite{KyrreSjobak::CLICWS19}, both important for the feasibility of reaching CLIC performance goals~\cite{CLIC-CDR,CLIC-PIP}.
 
-\todo[inline]{say someting about the experimental procedures}
+%Could say something of e.g. bump scan etc. here
 
 Furthermore, four CLIC-type prototype cavity BPMs are installed just downstream of the accelerating structures.
-Here, the BPMs themselves as well as the electronics are currently being tested, with initial tests indicating that a more robust in-tunnel electronics is needed.
+Here, the BPMs themselves as well as the electronics are currently being tested, with initial tests indicating that a more robust in-tunnel electronics is needed~\cite{NadenauThesis}.
 This is currently under development~\cite{AlexejLyapin::CLICWS19} and we expect to test it in 2019.
 
 \subsection{Plasma lens}
@@ -238,13 +238,12 @@ This is currently under development~\cite{AlexejLyapin::CLICWS19} and we expect 
 %\end{figure}
 
 Active plasma lenses is a technology enabling strongly focusing magnetic lenses for charged particle beams.
-Different from magnetic quadrupoles, they focus the beam radially, i.e.\ in both the horizontal and vertical plane.
-This removes the need for using multiple lenses to control the beam size, and may have important applications for XXXX\todo{...}.
+Different from magnetic quadrupoles, they focus the beam radially, i.e.\ simultaneously in the horizontal and vertical plane.
+This removes the need for using multiple lenses to control the beam size, and may have important applications for future linear colliders~\cite{CarlApochromatic,SteinkeCoupling} and particle sources~\cite{Braun1,Braun2}.
 
-The CLEAR plasma lens experiment has focused on showing emittance preservation and uniformity of the focusing gradient in different gasses.
+The CLEAR plasma lens experiment~\cite{CLEAR-PLE,Erik::CLEARrev} has until now mainly focused on showing emittance preservation and uniformity of the focusing gradient in different gasses.
 In 2018 the effect of the gas atomic weight on the development of focusing nonlinearities was demonstrated, showing that a linear focusing field and preservation of emittance can be achieved through the use of Argon gas~\cite{CarlPRL}.
-
-\todo[inline]{mini-OTR and window valve, spot sizes reached}
+The small emittance reachable with the CLEAR beam, making possible beam sizes below 40~\textmu m in the capillary, has enabled this experiment.
 
 \subsection{In-air test stand}
 
@@ -257,7 +256,7 @@ An upgrade of the current analog BTV beam observation system, which is heavily u
 As a test, a Bassler Gig-E camera has been installed at BTV 620, sharing the light from that camera using an optical beam splitting mirror.
 This has shown that such cameras can function in the environment at CLEAR.
 
-As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station\todo{cite} to the CLIC accelerating super-structure has been built\todo{cite}, however due to technical issues with the klystron it is not yet connected.
+As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station\todo{cite} to the CLIC accelerating super-structure has been built~\cite{Pitman:IPAC19-WEPRB063}, however due to technical issues with the klystron it is not yet connected.
 We expect this to happen during 2019, and will enable experiments \todo{...} as well as increased energy for the last part of the experimental beamline.
 
 Furthermore, a second experimental beam line is being planned, to be connected at the location of the VESPER spectrometer bending magnet shown in Figure \ref{fig:layout}.
@@ -275,6 +274,8 @@ CITE~\cite{Roberto::CLEARrev}
 \bibitem{Corsini:FirstCLEAR} R. Corsini et al., “First Experiments at the CLEAR user facility,” in Procedings of IPAC2018, Vancouver, BC, Canada, 2018, p. 4.
 
 \bibitem{CLEAR-MADX} \url{https://gitlab.cern.ch/CLEAR/CLEARLattice}.
+
+\bibitem{HelenPHELMA} H. Guérin, “Development and Implementation of Diagnostics for the CLEAR Facility,” Master thesis, École nationale supérieure de physique, électronique et Matériaux (PHELMA), Grenoble Institute of Technology, 2018.
 
 \bibitem{BergozICT} Bergoz Instrumentation, “Integrating Current Transformer User’s Manual.”.
 
@@ -306,13 +307,31 @@ CITE~\cite{Roberto::CLEARrev}
 
 \bibitem{CLIC-PIP} CERN, “The Compact Linear Collider (CLIC) – Project Implementation Plan - CERN Yellow Reports: Monographs, Vol 4 (2018),” CERN, Jan. 2019.
 
+\bibitem{NadenauThesis} J. Nadenau, “Examination of RF Signal Processing for Cavity BPMs,” Masters thesis, RWTH Aachen.
 \bibitem{AlexejLyapin::CLICWS19} A. Lyapin, M. Cargnelutti, M. Wendt, ``Cavity BPM at CLEAR'', presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3272592/}
 
+\bibitem{CarlApochromatic} C. A. Lindstrøm and E. Adli, “Design of general apochromatic drift-quadrupole beam lines,” Physical Review Accelerators and Beams, vol. 19, no. 7, Jul. 2016.
+
+\bibitem{Erik::CLEARrev} E. Adli, ``Plasma lens research at CLEAR,'' presented at the CLAER review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304103/}
+
+\bibitem{SteinkeCoupling} S. Steinke et al., “Multistage coupling of independent laser-plasma accelerators,” Nature, vol. 530, no. 7589, pp. 190–193, Feb. 2016.
+
+\bibitem{CLEAR-PLE} C. A. Lindstrøm et al., “Overview of the CLEAR plasma lens experiment,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, vol. 909, pp. 379–382, Nov. 2018.
+
 \bibitem{CarlPRL} C. A. Lindstrøm et al., “Emittance Preservation in an Aberration-Free Active Plasma Lens,” Phys. Rev. Lett., vol. 121, no. 19, p. 194801, Nov. 2018.
+
+\bibitem{Braun1} H. Braun, E. Boggasch, D. H. H. Hoffmann, and A. Tauschwitz, “Application of Plasma Lenses in Positron Sources,” p. 3.
+
+\bibitem{Braun2} H. Braun, “Positrons for Accelerators,” PhD, University of Zürich, Zürich, Switzerland, 1992.
 
 \bibitem{Thibaut::CLEARrev} T. Lefevre, ``Diagnostics and THz activities'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304102/}
 
 \bibitem{CurcioPRAB} A. Curcio et al., “Beam-based sub-THz source at the CERN linac electron accelerator for research facility,” Physical Review Accelerators and Beams, vol. 22, no. 2, Feb. 2019.
+
+\bibitem{Pitman:IPAC19-WEPRB063}
+   S. Pitman, N. Catalan-Lasheras, V. del Pozo Romano, G. McMonagle, B. J. Woolley, and A. V. Edwards,
+   \textquotedblleft{Connection of 12 GHz High Power RF from the XBOX 1 High Gradient Test Stand to the CLEAR Electron LINAC}\textquotedblright,
+   presented at the 10th Int. Particle Accelerator Conf. (IPAC'19), Melbourne, Australia, May 2019, paper WEPRB063, this conference.
 
 \bibitem{Roberto::CLEARrev} R. Corsini, ``CLEAR upgrades -- evolution -- future programs'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304104/}
 
