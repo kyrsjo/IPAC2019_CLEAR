@@ -191,13 +191,14 @@ The vacuum control system is also under consolidation, moving all the ion pump c
 
 The inductive BPMs, which originally were installed on the CTF3 drive beam, have been modified to work with the lower bunch charges of CLEAR and are currently in the process of being fully comissioned.
 
+An on-line optics model has been implemented, allowing the operators to immediatly estimate the impact of beam optics changes~\cite{Erik::CLEARrev}.
+This has been very useful for experiments requiring precise control of beam waists such as the plasma lens experiment and CLIC module tests, as well as greatly simplifying beam setup.
+
 One issue that was found and corrected during the shutdown 2018/2019 winter shut-down was the calibration of the beam charge monitors.
 These devices are Integrating Current Transformers~\cite{BergozICT}, and 3 such devices are installed in the CLEAR linac and used as the main beam charge monitoring devices.
 They are connected to an integrating circuit in the gallery, which computes the total charge within a time-window, and creates a long voltage pulse at a level proportional to the charge.
 The error was due to the conversion of this voltage to a charge reading, resulting in a measured charge exactly 10 times smaller than the actual.
 The wrongly reported charge was noticed by experiments~\cite{MarisTali:E-SEU,Antonio::IEEE-Kicks}, and then confirmed by using the calibration standard normally used to test the inductive BPMs.
-
-\todo[inline]{On-line model}
 
 \section{Overview of experimental program}
 
@@ -256,13 +257,11 @@ An upgrade of the current analog BTV beam observation system, which is heavily u
 As a test, a Bassler Gig-E camera has been installed at BTV 620, sharing the light from that camera using an optical beam splitting mirror.
 This has shown that such cameras can function in the environment at CLEAR.
 
-As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station\todo{cite} to the CLIC accelerating super-structure has been built~\cite{Pitman:IPAC19-WEPRB063}, however due to technical issues with the klystron it is not yet connected.
-We expect this to happen during 2019, and will enable experiments \todo{...} as well as increased energy for the last part of the experimental beamline.
+As mentioned earlier, the waveguide line for connecting the Xbox-1 X-band RF station~\cite{Xbox1,Xboxen} to the CLIC accelerating super-structure has been built~\cite{Pitman:IPAC19-WEPRB063}, however due to technical issues with the klystron it is not yet connected.
+We expect this to happen during 2019, and will enable the resumption of high gradient studies with beam, as well as increased energy for the last part of the experimental beamline.
 
-Furthermore, a second experimental beam line is being planned, to be connected at the location of the VESPER spectrometer bending magnet shown in Figure \ref{fig:layout}.
-This will enable the installation of more experiments, as well as simplifying experiments needing a strongly focused beam in air, without needing to dismatle parts of the beam-line as done in 2018.
-
-CITE~\cite{Roberto::CLEARrev}
+Furthermore, a second experimental beam line is being planned~\cite{Roberto::CLEARrev}, to be connected at the location of the VESPER spectrometer bending magnet shown in Figure \ref{fig:layout}.
+This will enable the installation of more experiments, as well as simplifying experiments needing a strongly focused beam in air, without needing to dismatle parts of the beam-line as was done in 2018.
 
 \section{Conclusion}
 
@@ -327,6 +326,10 @@ CITE~\cite{Roberto::CLEARrev}
 \bibitem{Thibaut::CLEARrev} T. Lefevre, ``Diagnostics and THz activities'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304102/}
 
 \bibitem{CurcioPRAB} A. Curcio et al., “Beam-based sub-THz source at the CERN linac electron accelerator for research facility,” Physical Review Accelerators and Beams, vol. 22, no. 2, Feb. 2019.
+
+\bibitem{Xbox1} J. W. Kovermann et al., “Commissioning of the First Klystron-based X-band Power Source at CERN,” presented at the IPAC’12, 2012.
+
+\bibitem{Xboxen} N. Catalán Lasheras et al., “Experience Operating an X-band High-Power Test Stand at CERN,” in Proceedings of the 5th Int. Particle Accelerator Conf., 2014, vol. IPAC2014, pp. 3 pages, 0.868 MB.
 
 \bibitem{Pitman:IPAC19-WEPRB063}
    S. Pitman, N. Catalan-Lasheras, V. del Pozo Romano, G. McMonagle, B. J. Woolley, and A. V. Edwards,
