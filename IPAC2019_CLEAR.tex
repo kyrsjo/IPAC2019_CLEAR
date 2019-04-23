@@ -74,11 +74,13 @@
 \author{K. N. Sjobak\thanks{k.n.sjobak@fys.uio.no}\textsuperscript{1}, E. Adli, C. A. Lindstrom\textsuperscript{2}, University of Oslo, Oslo, Norway\\
   M. Bergamaschi, S. Burger, R. Corsini, A. Curcio, S. Curt, S. Doebert, W. Farabolini, D. Gamba,\\
   L. Garolfi, A. Gilardi, I. Gorgisyan, E. Granados, H. Guerin, R. Kieffer, M. Krupa, T. Lefevre,\\
-  S. Mazzoni, G. McMonagle, J. Nadenau, H. Panuganti, S. Pitman, V. Rude, A. Schlogelhofer,\\
+  S. Mazzoni, G. McMonagle, H. Panuganti, S. Pitman, V. Rude, A. Schlogelhofer,\\
   P. K. Skowronski, M. Wendt, A. Zemanek, CERN, Geneva, Switzerland \\
+  J. Nadenau\textsuperscript{1,3}, Forschungszentrum J\"ulich, J\"ulich, Germany\\
   A. Lyapin, UCL, London, United Kingdom \\
-  \textsuperscript{1}Also at CERN, Geneva, Switzerland; \textsuperscript{2}Now at DESY, Hamburg, Germany}
-
+  \textsuperscript{1}Also at CERN, Geneva, Switzerland; \textsuperscript{2}Now at DESY, Hamburg, Germany;\\
+  \textsuperscript{3}Also at RWTH Aachen University, Aachen, Germany
+}
 \maketitle
 
 %
@@ -161,6 +163,7 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
     Typ. $\alpha$ at QFD350 entrance & -1 to +1 \\
     \bottomrule
   \end{tabular}
+  ~\vspace{-2em} %SORRY for mangling the layout here -- It was the least damaging I could do, when the author list suddenly grew by 2 lines!
 \end{table}
 
 CLEAR can provide a wide range of beams; the typical beam parameters are listed in Table~\ref{tab:beamparameters}.
@@ -227,7 +230,7 @@ They are currently used for measurements of short-range wake field kicks~\cite{A
 
 %Could say something of e.g. bump scan etc. here
 
-Furthermore, four CLIC-type prototype cavity BPMs are installed just downstream of the accelerating structures.
+Furthermore, four modified CLIC-type prototype cavity BPMs are installed just downstream of the accelerating structures.
 Here, the BPMs themselves as well as the associated electronics are currently being tested, with initial tests indicating that a more robust in-tunnel electronics is needed~\cite{NadenauThesis}.
 This is currently under development~\cite{AlexejLyapin::CLICWS19} and we expect to test it in 2019.
 
@@ -271,9 +274,9 @@ Due to increased operational experience and hardware commissioning, the operatio
 We look forward to continuing this program, including future additions of experiments and capabilities.
 
 \begin{thebibliography}{99}
-\bibitem{Gamba::CLEAR} D. Gamba et al., “The CLEAR user facility at CERN,” Nuclear Instruments and Methods in Physics Research Section A, Dec. 2017.
+\bibitem{Gamba::CLEAR} D.\ Gamba \emph{et al.}, “The CLEAR user facility at CERN,” Nucl.\ Instr.\ Meth.\ Phys.\ Res.\ A, Dec. 2017.
 
-\bibitem{Corsini:FirstCLEAR} R. Corsini et al., “First Experiments at the CLEAR user facility,” in Procedings of IPAC2018, Vancouver, BC, Canada, 2018.
+\bibitem{Corsini:FirstCLEAR} R.\ Corsini \emph{et al.}, “First Experiments at the CLEAR user facility,” presented at IPAC'18, Vancouver, BC, Canada, 2018.
 
 \bibitem{CLEAR-WEB} CLEAR official website. \url{http://clear.web.cern.ch/}
 
@@ -281,74 +284,75 @@ We look forward to continuing this program, including future additions of experi
 
 \bibitem{JUAS19} Joint Universities Accelerator Schoo (JUAS) 2019 program. \url{https://indico.cern.ch/event/779575/}
 
-\bibitem{HelenPHELMA} H. Guérin, “Development and Implementation of Diagnostics for the CLEAR Facility,” Master thesis, PHELMA, Grenoble Institute of Technology, 2018.
+\bibitem{HelenPHELMA} H.\ Guérin, “Development and Implementation of Diagnostics for the CLEAR Facility,” Master thesis, PHELMA, Grenoble Institute of Technology, 2018.
 
-\bibitem{LucaGun} L. Garolfi et al., “Beam Dynamics Studies and Instrumentation Tests for Bunch Length Measurements at CLEAR,” in Proceedings of the 29\textsuperscript{th} Linear Accelerator Conf., 2018, vol. LINAC2018.
+\bibitem{LucaGun} L.\ Garolfi \emph{et al.}, “Beam Dynamics Studies and Instrumentation Tests for Bunch Length Measurements at CLEAR,” presented at LINAC'18, Bejing, China, September 2018.
 
-\bibitem{BrossardGun} J. Brossard, M. Desmons, B. M. Mercier, C. P. Prevost, and R. Roux, “Construction of the Probe Beam Photo-injector of CTF3,” 2006.
+\bibitem{BrossardGun} J.\ Brossard, M.\ Desmons, B.\ M.\ Mercier, C.\ P.\ Prevost, and R.\ Roux, “Construction of the Probe Beam Photo-injector of CTF3,” presented at EPAC'06, Edinburgh, Scotland, 2006.
 
 \bibitem{Erik::CLEARrev} E. Adli, ``Plasma lens research at CLEAR,'' presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304103/}
 
 \bibitem{BergozICT} Bergoz Instrumentation, “Integrating Current Transformer User’s Manual.”.
 
 \bibitem{Gohil:IPAC19-MOPGW081}
-   C. G. Gohil, N. Blaskovic Kraljevic, D. Schulte, and P. Burrows,
-   \textquotedblleft{Measurements of Stray Magnetic Fields at CERN for CLIC}\textquotedblright,
-   presented at IPAC'19, Melbourne, Australia, May 2019, paper MOPGW081, this conference.
+   C.\ G.\ Gohil, N.\ Blaskovic Kraljevic, D.\ Schulte, and P.\ Burrows,
+   “Measurements of Stray Magnetic Fields at CERN for CLIC,”
+   presented at IPAC'19, Melbourne, Australia, May 2019, paper MOPGW081.
 
-\bibitem{MarisTali:E-SEU} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Upsets in Medical and Experimental Linacs,” IEEE Transactions on Nuclear Science, vol. 65, no. 8, pp. 1715–1723, Aug. 2018.
+\bibitem{MarisTali:E-SEU} M.\ Tali \emph{et al.}, “Mechanisms of Electron-Induced Single-Event Upsets in Medical and Experimental Linacs,” IEEE Trans.\ Nucl.\ Sci., vol.\ 65, no.\ 8, pp.\ 1715--1723, Aug.\ 2018.
 
-\bibitem{MarisTali:E-SEL} M. Tali et al., “Mechanisms of Electron-Induced Single-Event Latchup,” IEEE Transactions on Nuclear Science, vol. 66, no. 1, pp. 437–443, Jan. 2019.
+\bibitem{MarisTali:E-SEL} M.\ Tali \emph{et al.}, “Mechanisms of Electron-Induced Single-Event Latchup,” IEEE Trans.\ on Nucl.\ Sci., vol.\ 66, no.\ 1, pp.\ 437--443, Jan.\ 2019.
 
-\bibitem{RubenAlia::CLEARrev} Rubén García Alía, Maris Tali, ``VESPER and R2E activities,'' presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304093/}
+\bibitem{RubenAlia::CLEARrev} R.\ G.\ Alía, Maris Tali, “VESPER and R2E activities,'”presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304093/}
 
-\bibitem{Wilfrid::CLEARrev} W. Farabolini et al., ``VHEE and FLASH Medical Studies,'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304095/}
+\bibitem{Wilfrid::CLEARrev} W.\ Farabolini \emph{et al.}, “VHEE and FLASH Medical Studies,” presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304095/}
 
-\bibitem{FLASH2017} P. Montay-Gruel et al., “Irradiation in a flash: Unique sparing of memory in mice after whole brain irradiation with dose rates above 100 Gy/s,” Radiotherapy and Oncology, vol. 124, no. 3, pp. 365–369, Sep. 2017.
+\bibitem{FLASH2017} P.\ Montay-Gruel \emph{et al.}, “Irradiation in a flash: Unique sparing of memory in mice after whole brain irradiation with dose rates above 100 Gy/s,” Radiotherapy and Oncology, vol.\ 124, no.\ 3, pp.\ 365–369, Sep.\ 2017.
 
-\bibitem{Grudiev:TD26} A. Grudiev and W. Wuensch, “Design of the CLIC Main Linac Accelerating Structure for CLIC Conceptual Design Report,” presented at the LINAC’10, Tsukuba, Japan.
+\bibitem{Grudiev:TD26} A.\ Grudiev and W.\ Wuensch, “Design of the CLIC Main Linac Accelerating Structure for CLIC Conceptual Design Report,” presented at the LINAC’10, Tsukuba, Japan.
 
-\bibitem{Durand-mover::AccelAlign12} Mainaud Durand, H, Anastasopoulos, M, Griffet, S, Rude, V, and Sosin, M, “Validation of the CLIC alignment stratehy on short range,” presented at the International Workshops on Accelerator Alignment, Fermilab, Batavia, IL, USA, 2012.
+\bibitem{Durand-mover::AccelAlign12} H.\ Mainaud Durand, M.\ Anastasopoulos, S.\ Griffet, V.\ Rude, and M.\ Sosin, “Validation of the CLIC alignment stratehy on short range,” presented at the International Workshops on Accelerator Alignment, Fermilab, Batavia, IL, USA, 2012.
 
-\bibitem{Sosin-mover::IPAC12} M. Sosin et al., “Issues and Feasibility Demonstration of Positioning Closed Loop Control for the CLIC Supporting System Using a Test Mock-up with Five Degrees of Freedom,” presented at the IPAC’12, 2012.
+\bibitem{Sosin-mover::IPAC12} M.\ Sosin \emph{et al.}, “Issues and Feasibility Demonstration of Positioning Closed Loop Control for the CLIC Supporting System Using a Test Mock-up with Five Degrees of Freedom,” presented at the IPAC’12, 2012.
 
-\bibitem{Antonio::IEEE-Kicks} P. Arpaia, R. Corsini, A. Gilardi, and K. N. Sjobak, “Beam–based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proceedings of the International Instrumentation and Measurement Technology Conference, May 2019.
+\bibitem{Antonio::IEEE-Kicks} P.\ Arpaia, R.\ Corsini, A.\ Gilardi, and K.\ N.\ Sjobak, “Beam-based alignment of the CLIC high-gradient X-Band accelerating structure using beam-screen,” in proc. of the Int.\ Instrum.\ Meas.\ Tech.\ Conf., May 2019.
 
-\bibitem{KyrreSjobak::CLICWS19} Kyrre Sjobak, ``Tests of Wakefield Monitors (WFMs) at CLEAR'', presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3285765/}
+\bibitem{KyrreSjobak::CLICWS19} K.\ Sjobak, “Tests of Wakefield Monitors (WFMs) at CLEAR,” presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3285765/}
 
-\bibitem{CLIC-CDR} A Multi-TeV Linear Collider Based on CLIC Technology: CLIC Conceptual Design Report. 2012.
+\bibitem{CLIC-CDR} “A Multi-TeV Linear Collider Based on CLIC Technology: CLIC Conceptual Design Report,” 2012.
 
-\bibitem{CLIC-PIP} CERN, “The Compact Linear Collider (CLIC) – Project Implementation Plan - CERN Yellow Reports: Monographs, Vol 4 (2018),” CERN, Jan. 2019.
+\bibitem{CLIC-PIP} “The Compact Linear Collider (CLIC) – Project Implementation Plan - CERN Yellow Reports: Monographs, Vol 4 (2018),” CERN, Jan. 2019.
 
-\bibitem{NadenauThesis} J. Nadenau, “Examination of RF Signal Processing for Cavity BPMs,” Masters thesis, RWTH Aachen.
-\bibitem{AlexejLyapin::CLICWS19} A. Lyapin, M. Cargnelutti, M. Wendt, ``Cavity BPM at CLEAR'', presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3272592/}
+\bibitem{NadenauThesis} J.\ Nadenau, “Examination of RF Signal Processing for Cavity BPMs,” Masters thesis, RWTH Aachen.
 
-\bibitem{CarlApochromatic} C. A. Lindstrøm and E. Adli, “Design of general apochromatic drift-quadrupole beam lines,” Physical Review Accelerators and Beams, vol. 19, no. 7, Jul. 2016.
+\bibitem{AlexejLyapin::CLICWS19} A.\ Lyapin, M.\ Cargnelutti, M.\ Wendt, “Cavity BPM at CLEAR,” presented at CLIC workshop 2019. \url{https://indico.cern.ch/event/753671/contributions/3272592/}
 
-\bibitem{SteinkeCoupling} S. Steinke et al., “Multistage coupling of independent laser-plasma accelerators,” Nature, vol. 530, no. 7589, pp. 190–193, Feb. 2016.
+\bibitem{CarlApochromatic} C.\ A.\ Lindstrøm and E.\ Adli, “Design of general apochromatic drift-quadrupole beam lines,” Physical Review Accelerators and Beams, vol.\ 19, no.\ 7, Jul.\ 2016.
 
-\bibitem{Braun1} H. Braun, E. Boggasch, D. H. H. Hoffmann, and A. Tauschwitz, “Application of Plasma Lenses in Positron Sources,” EPAC'92.
+\bibitem{SteinkeCoupling} S.\ Steinke \emph{et al.}, “Multistage coupling of independent laser-plasma accelerators,” Nature, vol.\ 530, no.\ 7589, pp.\ 190--193, Feb.\ 2016.
+
+\bibitem{Braun1} H.\ Braun, E.\ Boggasch, D.\ H.\ H.\ Hoffmann, and A.\ Tauschwitz, “Application of Plasma Lenses in Positron Sources,” EPAC'92.
 
 %\bibitem{Braun2} H. Braun, “Positrons for Accelerators,” PhD, University of Zürich, Zürich, Switzerland, 1992.
 
-\bibitem{CLEAR-PLE} C. A. Lindstrøm et al., “Overview of the CLEAR plasma lens experiment,” Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, vol. 909, pp. 379–382, Nov. 2018.
+\bibitem{CLEAR-PLE} C.\ A.\ Lindstrøm \emph{et al.}, “Overview of the CLEAR plasma lens experiment,” Nucl.\ Instr.\ Meth.\ Phys.\ Res.\ A,, vol.\ 909, pp.\ 379--382, Nov.\ 2018.
 
-\bibitem{CarlPRL} C. A. Lindstrøm et al., “Emittance Preservation in an Aberration-Free Active Plasma Lens,” Phys. Rev. Lett., vol. 121, no. 19, p. 194801, Nov. 2018.
+\bibitem{CarlPRL} C.\ A.\ Lindstrøm \emph{et al.}, “Emittance Preservation in an Aberration-Free Active Plasma Lens,” Phys.\ Rev.\ Lett., vol.\ 121, no.\ 19, p.\ 194801, Nov.\ 2018.
 
-\bibitem{CurcioPRAB} A. Curcio et al., “Beam-based sub-THz source at the CERN linac electron accelerator for research facility,” Physical Review Accelerators and Beams, vol. 22, no. 2, Feb. 2019.
+\bibitem{CurcioPRAB} A.\ Curcio \emph{et al.}, “Beam-based sub-THz source at the CERN linac electron accelerator for research facility,” Physical Review Accelerators and Beams, vol. 22, no. 2, Feb. 2019.
 
-\bibitem{Thibaut::CLEARrev} T. Lefevre, ``Diagnostics and THz activities'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304102/}
+\bibitem{Thibaut::CLEARrev} T.\ Lefevre, “Diagnostics and THz activities,” presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304102/}
 
-\bibitem{Xbox1} J. W. Kovermann et al., “Commissioning of the First Klystron-based X-band Power Source at CERN,” presented at the IPAC’12, 2012.
+\bibitem{Xbox1} J.\ W.\ Kovermann \emph{et al.}, “Commissioning of the First Klystron-based X-band Power Source at CERN,” presented at IPAC’12, New Orleans, LA, USA, May 2012.
 
-\bibitem{Xboxen} N. Catalán Lasheras et al., “Experience Operating an X-band High-Power Test Stand at CERN,” in Proceedings of the 5th Int. Particle Accelerator Conf., 2014, vol. IPAC2014.
+\bibitem{Xboxen} N.\ Catalán Lasheras \emph{et al.}, “Experience Operating an X-band High-Power Test Stand at CERN,” presented at IPAC'14, Dresden, Germany, May 2014.
 
 \bibitem{Pitman:IPAC19-WEPRB063}
-   S. Pitman, N. Catalan-Lasheras, V. del Pozo Romano, G. McMonagle, B. J. Woolley, and A. V. Edwards,
-   \textquotedblleft{Connection of 12 GHz High Power RF from the XBOX 1 High Gradient Test Stand to the CLEAR Electron LINAC}\textquotedblright,
-   presented at IPAC'19, Melbourne, Australia, May 2019, paper WEPRB063, this conference.
+   S.\ Pitman, N.\ Catalan-Lasheras, V.\ del Pozo Romano, G.\ McMonagle, B.\ J. Woolley, and A.\ V.\ Edwards,
+   “Connection of 12 GHz High Power RF from the XBOX 1 High Gradient Test Stand to the CLEAR Electron LINAC,”
+   presented at IPAC'19, Melbourne, Australia, May 2019, paper WEPRB063.
 
-\bibitem{Roberto::CLEARrev} R. Corsini, ``CLEAR upgrades -- evolution -- future programs'', presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304104/}
+\bibitem{Roberto::CLEARrev} R.\ Corsini, “CLEAR upgrades -- evolution -- future programs,” presented at the CLEAR review 2019. \url{https://indico.cern.ch/event/781404/contributions/3304104/}
 
 \end{thebibliography}
 
