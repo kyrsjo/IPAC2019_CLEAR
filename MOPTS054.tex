@@ -59,9 +59,9 @@
 
 %BEAMLINE DRAWING
 \usepackage{caption, subcaption}
-\usepackage{tikz}
+%\usepackage{tikz}
 %\usepackage{etoolbox}
-\input{fig/map/BEAMLINE_TIKZMACROS.tex}
+%\input{fig/map/BEAMLINE_TIKZMACROS.tex}
 
 %TMP WHILE WRITING
 %\usepackage{showframe}
@@ -121,14 +121,16 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
   \centering
   \begin{subfigure}{\textwidth}
     \centering
-    \input{fig/map/CALIFES.tex}
+    % \input{fig/map/CALIFES.tex}
+    \includegraphics{MOPTS054f1.pdf}
     \vspace{-2.5em} % Eat the space taken by some empty nodes
     \caption{CALIFES injector}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
     \vspace{-1em}
-    \input{fig/map/EXPERIMENTAL1.tex}
+    % \input{fig/map/EXPERIMENTAL1.tex}
+    \includegraphics{MOPTS054f2.pdf}
     \vspace{-0.5em}
     \caption{Experimental beamline
       (continues after CALIFES, shown above)}
@@ -136,7 +138,8 @@ Unlike the rest of the CERN accelerator complex, CLEAR will be kept running thro
   \begin{subfigure}{\textwidth}
     \centering
     \vspace{-0.5em}
-    \input{fig/map/LEGEND.tex}
+    % \input{fig/map/LEGEND.tex}
+    \includegraphics{MOPTS054f3.pdf}
     \vspace{-2em} % Eat the space taken by some empty nodes
     \caption{Symbols}
   \end{subfigure}
